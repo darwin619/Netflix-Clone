@@ -17,7 +17,7 @@ class Movies extends React.Component {
     return (
         <div className="movies">
 		 	<h1>WTF BRO</h1>
-		 	<CollectionOverview />
+		 	
 		</div>
         
     );
