@@ -1,0 +1,53 @@
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo {
+    height: 100%;
+    width: 120px;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .options {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+
+    .option {
+      padding: 10px 12px;
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 550;
+      background-color: transparent;
+      cursor: pointer;
+      color: #E5E5E5;
+      text-decoration: none;
+      line-height: 1.2;
+     -webkit-font-smoothing: antialiased;
+
+      &:hover {
+        color: #A9A9A9;
+        transition: 0.4s all;
+      }
+
+    }
+}
+
+  .last {
+        margin-left: auto;
+        margin-right: 15px;
+  }
+
+  .shift {
+        margin-right: 25px;
+  }
+
+
+}
