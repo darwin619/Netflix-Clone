@@ -3,6 +3,7 @@ import './TvShow.scss';
 import {connect} from 'react-redux';
 import {selectTVItems, selectTVGridItems} from '../../Redux/TVShow/tv-selectors';
 import {getTvShows, getTvShowsGrid} from '../../Redux/TVShow/tv-actions';
+import CollectionOverview from '../../Components/CollectionOverview/CollectionOverview';
 
 class TvShow extends React.Component {
 
@@ -12,11 +13,9 @@ class TvShow extends React.Component {
 	}
 
 	render() {
-		const {tvItems, tvShowGridItems} = this.props;
     return (
         <div className="TV">
-		 	<h1>WTF BRO</h1>
-		 	{console.log('tv grid', tvShowGridItems)}
+		 	<CollectionOverview tvshow />
 		</div>
         
     );

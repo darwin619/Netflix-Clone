@@ -3,7 +3,7 @@ import './SearchBar.scss';
 
 const SearchBar = () => {
     return (
-        <div className="box">
+        <div className="container-1">
 		  <div className="container-2">
 		      <span className="icon"><i className="fa fa-search"></i></span>
 		      <input type="search" id="search" placeholder="Movies, TV Shows..." />

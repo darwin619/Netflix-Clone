@@ -13,11 +13,9 @@ class Movies extends React.Component {
 	}
 
 	render() {
-		const {movieItems, movieGridItems} = this.props;
     return (
         <div className="movies">
-		 	<h1>WTF BRO</h1>
-		 	
+		 	<CollectionOverview movies />
 		</div>
         
     );

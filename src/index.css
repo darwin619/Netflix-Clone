@@ -3,5 +3,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: helvetica;
-  background-color: #141414;
+  background-color: black;
+  backface-visibility: hidden;
 }
+
+/*#141414*/

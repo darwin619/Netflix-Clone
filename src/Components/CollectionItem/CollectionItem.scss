@@ -1,0 +1,67 @@
+.box {
+	 position: relative;
+}
+
+.movie-image {
+	width: 300px;
+  z-index: 1;
+}
+
+.movie-name {
+	color: white;
+	font-size: 0.9rem;
+}
+
+.overview {
+   color: white;
+}
+
+.more {
+	color: white;
+	display: inline;
+}
+
+.text{
+  position: absolute;
+  bottom:7%;
+  left:2%;
+  right: 1%;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .62s, ease 1s;
+  font-size: 10px;
+}
+
+.box:hover .text {
+  visibility: visible;
+  transition: opacity .62s, ease 1s;
+  opacity: 1;
+}
+
+.box:hover .movie-image {
+  transition: opacity .62s, ease 1s;
+  opacity: 0.5;
+}
+
+.addtolist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+   &:hover {
+}
+}
+
+.fass {
+  padding: 5px;
+  border-radius: 50%;
+   border: 1px solid white;
+   display: inline;
+   margin-right: 5px;
+  &:hover {
+  transition: all 0.2s ease-in;
+ transform: scale(1.1);
+}
+ 
+}
