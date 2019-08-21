@@ -4,7 +4,7 @@ import CollectionPreview from '../CollectionPreview/CollectionPreview';
 import CollectionData from './CollectionData';
 
 const CollectionOverview = ({movies,tvshow}) => {
-	console.log(movies,tvshow)
+	
 return (
     <div className="collection-overview">
 		{

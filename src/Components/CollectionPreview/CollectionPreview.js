@@ -8,39 +8,29 @@ import {selectTVItems} from '../../Redux/TVShow/tv-selectors';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {TitleHide} from '../../Utils/TitleHide';
-import $ from "jquery";
+import {LeftArrow, RightArrow} from '../../Utils/ScrollArrows';
 
 class CollectionPreview extends React.Component  {
 	constructor() {
 		super();
-		this.state = {
-			margin: 0
-		}
+		this.divRef = React.createRef();
 	}
-
+	
     componentDidUpdate() {
-     	var node = ReactDOM.findDOMNode(this);
+    	var node = ReactDOM.findDOMNode(this);
      	TitleHide(node);
-
-     	    	$(document).ready(function(){
-    $(".left-controls").click(function(){
-        $(".preview").animate({scrollLeft: "-="+100});
-    });
-    $(".right-controls").click(function(){
-        $(".preview").animate({scrollLeft: "+="+100});
-    });        
-});
      }
 
     render() {
     	const {title,movieItems,tvItems,start,end,movies,tvshow} = this.props;
     	const movieData = movieItems.slice(start, end);
         const tvData = tvItems.slice(start, end);
+
 	return (
-	<div className="collection-preview" id="scroll">
-		<h1 className="title">{title.toUpperCase()}</h1>
+	<div className="collection-preview" id="scroll" ref={this.divRef}>
+		<div className="title-container"><h1 className="title">{title.toUpperCase()}</h1></div>
 		<div className="collection-box">
-				<span><FontAwesomeIcon icon={faChevronLeft} className="left-controls" /> </span>
+		<span className="fix"><FontAwesomeIcon icon={faChevronLeft} className="left-controls"  onClick={() => LeftArrow(this.divRef)} /> </span>
     <div className="preview">	
 	
 	  {     
@@ -54,7 +44,7 @@ class CollectionPreview extends React.Component  {
 	  		: null
 	  }
     </div>
-	 			 <span><FontAwesomeIcon icon={faChevronRight} className="right-controls " /> </span>
+	 	<span className="fix"><FontAwesomeIcon icon={faChevronRight} className="right-controls" onClick={() => RightArrow(this.divRef)} /> </span>
       		</div>
 		</div>
 		);

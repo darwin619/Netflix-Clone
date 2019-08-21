@@ -7,6 +7,5 @@ export const TitleHide = (node) => {
 	preview.addEventListener('mouseleave', function(){
     title.setAttribute("style", "opacity:1; ")
 })
-	node.querySelector('.box').style.transition = "transform 300ms ease 100ms";
-	console.log(node)
+	node.querySelector('.box');
 }

@@ -3,19 +3,18 @@
   flex-direction: column;
   margin-bottom: 0px;
   height: 270px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  overflow-x: auto;
- &::-webkit-scrollbar {
-    display: none;
-  }
+  position: relative;
   
+.title-container {
+  display: inline-block;
+  position: relative;
+  left: 0%;
+}
 
 .title {
 	font-size: 1.4rem;
 	margin-left: 3px;
-  top: 0;
+
 }
 
 .collection-box {
@@ -23,6 +22,7 @@
   flex-direction: row;
   cursor: pointer;
   position: relative;
+
 
 .left-controls {
   position: absolute;
@@ -64,8 +64,10 @@
 
   .preview {
     display: flex;
-    overflow-x: auto;
     cursor: pointer;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 170px;
 
     &:hover {
       .box {
