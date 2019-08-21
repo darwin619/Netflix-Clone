@@ -16,10 +16,10 @@ const CollectionItem = ({title,overview,backdrop_path,name}) =>  {
 			    <div className="text">
 					<h1 className="movie-name">{title}</h1>
 					<h1 className="movie-name">{name}</h1>
-					<span class="overview">{para}</span> 
+					<span className="overview">{para}</span> 
 		    	 <div className="addtolist">
 				    <FontAwesomeIcon icon={faPlus} className="fass fa-plus" />
-				    <span class="add">Add to list</span>
+				    <span className="add">Add to list</span>
 				 </div>
 			  </div>
 		  </div>

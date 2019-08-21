@@ -13,7 +13,7 @@ const IMAGE_BASE_URL ='http://image.tmdb.org/t/p/';
 const BACKDROP_SIZE = 'w1280';
 
 // w92, w154, w185, w342, w500, w780, original
-const GRID_IMAGE_SIZE = 'w780';
+const GRID_IMAGE_SIZE = 'w500';
 
 export {
   API_URL,

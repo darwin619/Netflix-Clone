@@ -1,33 +1,36 @@
- handleLeftClick = e => {
-    e.preventDefault();
-    if (this.state.margin < 350) {
-      this.setState({
-        margin: this.state.margin + 350
-      });
-      // eslint-disable-next-line
-      const el = findDOMNode(this.refs.content);
-      $(el).animate(
-        {
-          marginLeft: "+=350px"
-        },
-        "fast"
-      );
-    }
-  };
+  import $ from "jquery";
 
-  handleRightClick = e => {
-    e.preventDefault();
-    if (this.state.margin > -4200) {
-      this.setState({
-        margin: this.state.margin - 350
-      });
-      // eslint-disable-next-line
-      const el = findDOMNode(this.refs.content);
-      $(el).animate(
-        {
-          marginLeft: "-=350px"
-        },
-        "fast"
-      );
-    }
-  };
+    var scrollTimer;
+    var $document = $(document);
+    var scrollOffset = 20;
+    var maxScrollOffsetLeft = $document.width() - $("body").innerWidth();
+
+    function scrollContent(scrollDir) {
+        var scrollArgs = {
+            scrollLeft: ($document.scrollLeft() + (scrollOffset * scrollDir))
+        };
+        $("html").animate(scrollArgs, 50);
+    };
+
+    function scrollLeft() {
+        if ($document.scrollLeft() > 0) {
+            scrollContent(-1);
+        }
+    };
+
+    function scrollRight() {
+        if ($document.scrollLeft() < maxScrollOffsetLeft) {
+            scrollContent(1);
+        }
+    };
+
+    function scrollStop() {
+        clearInterval(scrollTimer);
+    };
+
+    $(".left-controls").on("mousedown", function () {
+        scrollTimer = setInterval(scrollLeft, 60);
+    }).on("mouseup", scrollStop);
+    $(".right-controls").on("mousedown", function () {
+        scrollTimer = setInterval(scrollRight, 60);
+    }).on("mouseup", scrollStop);

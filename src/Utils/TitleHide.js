@@ -8,4 +8,5 @@ export const TitleHide = (node) => {
     title.setAttribute("style", "opacity:1; ")
 })
 	node.querySelector('.box').style.transition = "transform 300ms ease 100ms";
+	console.log(node)
 }

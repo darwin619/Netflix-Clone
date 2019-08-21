@@ -2,17 +2,20 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 0px;
-  overflow: hidden;
-  height: 290px;
+  height: 270px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  overflow-x: auto;
+ &::-webkit-scrollbar {
+    display: none;
+  }
+  
 
 .title {
 	font-size: 1.4rem;
 	margin-left: 3px;
   top: 0;
-}
-
-.title-container {
-  position: relative;
 }
 
 .collection-box {
@@ -29,7 +32,7 @@
   height: 168px;
   z-index: 40;
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.4;
   display: flex;
   cursor: pointer;
   text-align: center;
@@ -48,20 +51,20 @@
   height: 168px;
   z-index: 40;
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.4;
   display: flex;
   cursor: pointer;
   text-align: center;
   justify-content: center;
   color: #fff;
    &:hover {
-       color: black;
+       width: 3%;
       }
 }
 
   .preview {
     display: flex;
-    
+    overflow-x: auto;
     cursor: pointer;
 
     &:hover {
@@ -79,15 +82,19 @@
     }
     
     .box {
-      &:not(:first-child) {
+      & {
       transition: transform 300ms ease 100ms;
     }
+
+      &:first-child {
+        transform-origin: left;
+      }
 
       &:hover {
         transform: scale(1.5);
       }
       &:hover:first-child {
-        transform-origin: left;
+        
         transform: scale(1.5);
       }
   }
