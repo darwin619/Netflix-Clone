@@ -3,10 +3,11 @@ import $ from "jquery";
 export const LeftArrow = (node) => {
     var move = node.current;
     var exclude = $(move).not($(move).children('.title'))
-     console.log(cons)
+     console.log(exclude)
     $(exclude).animate({
         scrollLeft: '+=256px'
 });
+}
     
 export const RightArrow = (node) => {
     var move = node.current;
