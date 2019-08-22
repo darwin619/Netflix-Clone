@@ -1,0 +1,48 @@
+.grid-item {
+	 width: 100%;
+   position: relative;
+}
+
+.grid-image {
+	 width: 100vw;  
+   height: auto;
+}
+
+
+
+.grid-overview {
+   color: white;
+}
+
+.grid-text{
+  position: absolute;
+  bottom:33%;
+  left:5%;
+  cursor: pointer;
+  right: 11%;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 3px 3px 4px black;
+}
+
+.addtolist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+   &:hover {
+}
+}
+
+.fass {
+  padding: 5px;
+  border-radius: 50%;
+   border: 1px solid white;
+   display: inline;
+   margin-right: 5px;
+  &:hover {
+  transition: all 0.2s ease-in;
+ transform: scale(1.1);
+}
+ 
+}

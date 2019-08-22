@@ -1,0 +1,54 @@
+.outer-grid {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.collection-grid {
+ margin: 0;
+ padding: 0;
+ width: 100%;
+  overflow-x: hidden;
+}
+
+.grid-preview {
+   display: inline-flex;
+  flex-direction: row;
+
+}
+
+.left {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  bottom: 5%;
+  font-size: 3rem;
+  z-index: 40;
+  opacity: 0.8;
+  cursor: pointer;
+  color: white;
+    &:hover {
+      font-size: 3.5rem;
+       color: white;
+       transition: all 0.2s ease;
+      } 
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  opacity: 0.8;
+  cursor: pointer;
+  color: white;
+   &:hover {
+       font-size: 3.5rem;
+       color: white;
+       transition: all 0.2s ease;
+      }
+}

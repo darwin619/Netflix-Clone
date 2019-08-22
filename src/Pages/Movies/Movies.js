@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {selectMovieItems, selectMovieGridItems} from '../../Redux/Movie/movie-selectors';
 import {getMovies, getMovieGrid} from '../../Redux/Movie/movie-actions';
 import CollectionOverview from '../../Components/CollectionOverview/CollectionOverview';
+import CollectionGrid from '../../Components/CollectionGrid/CollectionGrid';
 
 class Movies extends React.Component {
 
@@ -15,9 +16,9 @@ class Movies extends React.Component {
 	render() {
     return (
         <div className="movies">
+            <CollectionGrid movies/>
 		 	<CollectionOverview movies />
 		</div>
-        
     );
 }
 }

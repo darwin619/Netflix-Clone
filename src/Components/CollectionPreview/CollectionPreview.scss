@@ -4,6 +4,8 @@
   margin-bottom: 0px;
   height: 270px;
   position: relative;
+  overflow: hidden;
+  
   
 .title-container {
   display: inline-block;
@@ -25,49 +27,44 @@
 
 
 .left-controls {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 2%;
-  height: 168px;
-  z-index: 40;
-  background-color: black;
-  opacity: 0.4;
+   position: absolute;
+  height: 100%;
   display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  z-index: 40;
+  opacity:1;
   cursor: pointer;
-  text-align: center;
-  justify-content: center;
-  color: #fff;
+  color: white;
+  
    &:hover {
-    
-      }
+       font-size: 3rem;
+       color: white;
+       transition: all 0.2s ease;
+      } 
 }
 
 .right-controls {
   position: absolute;
-  top: 0;
+  height: 100%;
   right: 0%;
-  width: 2%;
-  height: 168px;
-  z-index: 40;
-  background-color: black;
-  opacity: 0.4;
   display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  z-index: 40;
+  opacity:1;
   cursor: pointer;
-  text-align: center;
-  justify-content: center;
-  color: #fff;
+  color: white;
    &:hover {
-       width: 3%;
-      }
+       font-size: 3rem;
+       color: white;
+       transition: all 0.2s ease;
+      } 
 }
 
   .preview {
     display: flex;
     cursor: pointer;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    height: 170px;
 
     &:hover {
       .box {

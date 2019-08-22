@@ -8,7 +8,7 @@ import {selectTVItems} from '../../Redux/TVShow/tv-selectors';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {TitleHide} from '../../Utils/TitleHide';
-import {LeftArrow, RightArrow} from '../../Utils/ScrollArrows';
+import {LeftArrow, RightArrow, setLeftNone, setRightNone} from '../../Utils/ScrollArrows';
 
 class CollectionPreview extends React.Component  {
 	constructor() {
@@ -21,6 +21,13 @@ class CollectionPreview extends React.Component  {
      	TitleHide(node);
      }
 
+     onLeftClick = () => {
+     	LeftArrow(this.divRef); 
+     }
+     onRightClick = () => {
+     	RightArrow(this.divRef); 
+     }
+
     render() {
     	const {title,movieItems,tvItems,start,end,movies,tvshow} = this.props;
     	const movieData = movieItems.slice(start, end);
@@ -28,9 +35,10 @@ class CollectionPreview extends React.Component  {
 
 	return (
 	<div className="collection-preview" id="scroll" ref={this.divRef}>
-		<div className="title-container"><h1 className="title">{title.toUpperCase()}</h1></div>
+		<h1 className="title">{title.toUpperCase()}</h1>
 		<div className="collection-box">
-		<span className="fix"><FontAwesomeIcon icon={faChevronLeft} className="left-controls"  onClick={() => LeftArrow(this.divRef)} /> </span>
+		<span className="fix"><FontAwesomeIcon icon={faChevronLeft} className="left-controls"  
+		onClick={this.onLeftClick} /> </span>
     <div className="preview">	
 	
 	  {     
@@ -44,7 +52,8 @@ class CollectionPreview extends React.Component  {
 	  		: null
 	  }
     </div>
-	 	<span className="fix"><FontAwesomeIcon icon={faChevronRight} className="right-controls" onClick={() => RightArrow(this.divRef)} /> </span>
+	 	<span className="fix"><FontAwesomeIcon icon={faChevronRight} className="right-controls" 
+	 	onClick={this.onRightClick}/> </span>
       		</div>
 		</div>
 		);
