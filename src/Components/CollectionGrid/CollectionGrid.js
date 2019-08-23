@@ -17,7 +17,6 @@ class CollectionGrid extends React.Component  {
 
     render() {
     	const {movieGridItems,tvShowGridItems,movies,tvshow} = this.props;
-		console.log(movieGridItems)
 	return (
 		<div className="outer-grid">
 		<span><FontAwesomeIcon icon={faChevronLeft} className="left" onClick={() => LeftGridArrow(this.gridRef)} /> </span>
