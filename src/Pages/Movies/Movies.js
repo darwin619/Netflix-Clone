@@ -12,7 +12,7 @@ class Movies extends React.Component {
 		this.props.dispatch(getMovieGrid());
 		this.props.dispatch(getMovies());
 	}
-
+	
 	render() {
     return (
         <div className="movies">

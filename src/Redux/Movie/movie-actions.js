@@ -1,5 +1,5 @@
 import MovieActionTypes from './movie-types';
-import {fetchData} from '../../Services/MovieService';
+import {fetchData,fetchAdditionalMovieData} from '../../Services/MovieService';
 import {fetchGrid} from '../../Services/MovieGridService';
 
 export function getMovies() {
@@ -16,6 +16,14 @@ export function getMovieGrid() {
     fetchGrid().then(data => {
       const movieGridData = data.flatMap(({ results }) => results[0]);
       dispatch({ type: MovieActionTypes.SET_MOVIE_GRID_DATA, payload: movieGridData });
+    });
+  }
+}
+
+export function getAdditionalMovieData(id) {
+  return (dispatch) => {
+    fetchAdditionalMovieData(id).then(data => {
+      dispatch({ type: MovieActionTypes.SET_MOVIE_ADDITIONAL_DATA, payload: data });
     });
   }
 }

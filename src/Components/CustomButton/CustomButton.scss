@@ -1,0 +1,42 @@
+.custom-button {
+  min-width: 130px;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 22px 0 22px;
+  font-size: 14.5px;
+  background-color: #e50914;
+  font-weight: 600;
+  font-family: helvetica;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-bottom:30px;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+
+  }
+
+  &.signin {
+    background-color: #fff;
+    color: black;
+
+    &:hover {
+    border: none;
+    }
+  }
+
+  
+  .custom-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+}

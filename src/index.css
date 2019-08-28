@@ -5,6 +5,8 @@ body {
   font-family: helvetica;
   background-color: black;
   backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 /*#141414*/

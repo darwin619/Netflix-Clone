@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import {FixString} from '../../Utils/FixString';
 
 const selectTV = state => state.tv;
 
@@ -12,3 +13,17 @@ export const selectTVGridItems = createSelector(
   tv => tv.tvGridItems
 );
 
+export const selectTVCast = createSelector(
+  [selectTV],
+  tv => tv.tvCast
+);
+
+export const selectTVVideos = createSelector(
+  [selectTV],
+  tv => tv.tvVideos
+);
+
+export const selectTVByTitle = params => createSelector(
+  [selectTVItems],
+  tvItems => tvItems.filter(items => FixString(items.name) === params)
+);

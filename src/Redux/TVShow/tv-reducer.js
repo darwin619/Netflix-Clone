@@ -2,7 +2,9 @@ import TVActionTypes from './tv-types';
 
 const INITIAL_STATE = {
   tvItems: [],
-  tvGridItems: []
+  tvGridItems: [],
+  tvCast: [],
+  tvVideos: []
 };
 
 const TVReducer = (state = INITIAL_STATE, action) => {
@@ -13,6 +15,9 @@ const TVReducer = (state = INITIAL_STATE, action) => {
 	    }
 	     case TVActionTypes.SET_TV_GRID_DATA : {
 	      return { ...state, tvGridItems: payload };
+	    }
+	     case TVActionTypes.SET_TV_ADDITIONAL_DATA : {
+	      return { ...state, tvCast: payload.credits.cast, tvVideos: payload.videos.results[0].key };
 	    }
 	    default: 
       	  return state 
