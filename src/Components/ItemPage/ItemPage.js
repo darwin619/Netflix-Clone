@@ -8,23 +8,28 @@ import {selectMovieCast,selectMovieVideos} from '../../Redux/Movie/movie-selecto
 import ItemPageFooter from '../ItemPageFooter/ItemPageFooter';
 import {getAdditionalMovieData} from '../../Redux/Movie/movie-actions';
 import {getAdditionalTVData} from '../../Redux/TVShow/tv-actions';
+import Fade from 'react-reveal/Fade';
+
 
 class ItemPage extends React.Component {
 	componentDidMount() {
 	return this.props.movies 
-	? this.props.dispatch(getAdditionalMovieData(this.props.id)) 
-	: this.props.dispatch(getAdditionalTVData(this.props.id))
+	? this.props.dispatch(getAdditionalMovieData(this.props.item.id)) 
+	: this.props.dispatch(getAdditionalTVData(this.props.item.id))
 	}
 	render() {
-		 const {title,name,overview,backdrop_path,poster_path,vote_average,movies,tvshow} = this.props
+		 const {item,movies,tvshow} = this.props
+		 const {title,name,overview,backdrop_path,poster_path,vote_average} = item
 		 const background =`${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop_path}`
 	     const poster =`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`
 	     return (
+	    
 		<div className="item-page">
 		  <div className="background-image" 
 		  style={{backgroundImage: `url(${background})`
 		}}/>
 		<div className="item">
+		<Fade>
 			<div className="item-container">
 				<div className="container">
 					<div className="image-container">
@@ -34,22 +39,26 @@ class ItemPage extends React.Component {
 					<h1 className="item-name">{title}</h1>
 					<h1 className="item-name">{name}</h1>
 					<span className="paragraph">{overview}</span>
-					<span className="rating">
+					<div className="item-rating">
 						<img src={imdb} alt="imdb" className="imdb" />
 						<span className="rank">{vote_average}/</span>
 						<span className="ten">10</span>
 						<img src={star} alt="imdb" className="star" />
-					</span>
+					</div>
 					<h1 className="cast-title">Cast</h1>
-					<ItemPageFooter movies={movies} tvshow={tvshow} />
+					<ItemPageFooter movies={movies} tvshow={tvshow} item={item} />
 				</div>
 		</div>
 		</div>
+		</Fade>
 	    </div>
 	    </div>
+	    
 	);
 }
 }
+
+
 
 const mapStateToProps = state => ({
 	movieCast: selectMovieCast(state),

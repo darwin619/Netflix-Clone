@@ -1,0 +1,105 @@
+.list-item {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 15px;
+
+	&:hover {
+		.rating, .list-addtolist {
+			visibility: visible;
+		}
+	}
+}
+
+.list-image-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.list-image {
+	width: 240px;
+	height: 360px;
+	cursor: pointer;
+	transition: opacity .4s, ease 0.6s;
+}
+
+.list-movie-name {
+	font-size: 1.1rem;
+	margin-bottom: 10px; 
+}
+
+.rating-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.rating {
+	padding: 5px;
+	background-color: black;
+	display: inline-flex;
+	align-items: center;
+	margin-top: 15px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0%;
+	visibility: hidden;
+	z-index: 40;
+}
+
+.rank {
+	font-size: 1.1rem;
+	font-weight: lighter;	
+	margin-left: 7px;	
+	margin-top: 3px;
+	color: white;
+}
+
+.ten {
+	font-size: 14px;
+	margin-top: 4px;
+	color: white;
+}
+
+.imdb {
+	width: 50px;
+}
+
+.star {
+	width: 30px;
+}
+
+
+.list-addtolist {
+	position: absolute;
+	color: white;
+	bottom: 16%;
+	text-shadow: 5px 5px 6px black;
+	z-index: 40;
+	cursor: pointer;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+
+.remove-icon {
+   display: inline;
+   font-size: 2.2rem;
+  &:hover {
+  transition: all 0.25s ease-in;
+ transform: scale(1.25);
+}
+}
+
+.rating, .addtolist, .list-item {
+	&:hover {
+		.list-image {
+			opacity: 0.4;
+		}
+	}
+}

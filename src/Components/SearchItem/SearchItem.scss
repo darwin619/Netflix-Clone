@@ -1,0 +1,108 @@
+.search-item {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 15px;
+
+	&:hover {
+		.rating, .search-addtolist {
+			visibility: visible;
+		}
+	}
+}
+
+.search-image-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.search-image {
+	width: 240px;
+	height: 360px;
+	cursor: pointer;
+	transition: opacity .4s, ease 0.6s;
+}
+
+.search-movie-name {
+	font-size: 1.1rem;
+	margin-bottom: 10px; 
+}
+
+.rating-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.rating {
+	padding: 5px;
+	background-color: black;
+	display: inline-flex;
+	align-items: center;
+	margin-top: 15px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0%;
+	visibility: hidden;
+	z-index: 40;
+}
+
+.rank {
+	font-size: 1.1rem;
+	font-weight: lighter;	
+	margin-left: 7px;	
+	margin-top: 3px;
+	color: white;
+}
+
+.ten {
+	font-size: 14px;
+	margin-top: 4px;
+	color: white;
+}
+
+.imdb {
+	width: 50px;
+}
+
+.star {
+	width: 30px;
+}
+
+
+.search-addtolist {
+	position: absolute;
+	color: white;
+	bottom: 18%;
+	text-shadow: 5px 5px 6px black;
+	z-index: 40;
+	cursor: pointer;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+
+.fass {
+  padding: 5px;
+  border-radius: 50%;
+   border: 1px solid white;
+   display: inline;
+   margin-right: 5px;
+  &:hover {
+  transition: all 0.2s ease-in;
+ transform: scale(1.1);
+}
+}
+
+.rating, .addtolist, .search-item {
+	&:hover {
+		.search-image {
+			opacity: 0.5;
+		}
+	}
+}

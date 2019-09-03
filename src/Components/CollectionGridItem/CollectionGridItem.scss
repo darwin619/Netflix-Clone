@@ -1,6 +1,12 @@
 .grid-item {
 	 width: 100%;
    position: relative;
+
+   &:last-child {
+    .grid-movie-text {
+      bottom:38%;
+    }
+   }
 }
 
 .grid-image {
@@ -8,15 +14,13 @@
    height: auto;
 }
 
-
-
 .grid-overview {
    color: white;
 }
 
-.grid-text{
+.grid-movie-text {
   position: absolute;
-  bottom:33%;
+  bottom:32%;
   left:5%;
   cursor: pointer;
   right: 5%;
@@ -26,24 +30,14 @@
   line-height: 25px;
 }
 
-.addtolist {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 15px;
-   &:hover {
-}
-}
-
-.fass {
-  padding: 5px;
-  border-radius: 50%;
-   border: 1px solid white;
-   display: inline;
-   margin-right: 5px;
-  &:hover {
-  transition: all 0.2s ease-in;
- transform: scale(1.1);
-}
- 
+.grid-tv-text {
+  position: absolute;
+  bottom:41%;
+  left:5%;
+  cursor: pointer;
+  right: 5%;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 3px 3px 4px black;
+  line-height: 25px;
 }

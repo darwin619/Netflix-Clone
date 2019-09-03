@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   movieItems: [],
   movieGridItems: [],
   movieCast: [],
-  movieVideos: []
+  movieVideos: ''
 };
 
 const movieReducer = (state = INITIAL_STATE, action) => {
@@ -17,7 +17,7 @@ const movieReducer = (state = INITIAL_STATE, action) => {
 	      return { ...state, movieGridItems: payload };
 	    }
 	    case MovieActionTypes.SET_MOVIE_ADDITIONAL_DATA : {
-	      return { ...state, movieCast: payload.credits.cast, movieVideos: payload.videos.results[0].key};
+	      return { ...state, movieCast: payload.credits.cast, movieVideos: payload.videos.results.length ? (payload.videos.results[0].key) : 'no_trailer_found' };
 	    }
 
 	    default: 

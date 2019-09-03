@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { signInWithGoogle } from '../../Firebase/firebase.utils';
+import { auth } from '../../Firebase/firebase.utils';
 
 class SignIn extends React.Component {
 	constructor() {
@@ -16,6 +17,20 @@ class SignIn extends React.Component {
 			password: ''
 		}
 	}
+
+    handleSubmit = async event => {
+		event.preventDefault();
+    	const { email, password } = this.state;
+
+    try {
+		await auth.signInWithEmailAndPassword(email,password);
+		this.setState( { email: '', password: '' } )
+    }
+    catch (error) {
+	      console.error(error);
+	    }
+}
+
 
 	handleChange = event => {
 		const {value, name} = event.target;
@@ -33,7 +48,7 @@ class SignIn extends React.Component {
 				<div className="form-shadow">
 					<h1 className="signin-title">Sign In</h1>
 				
-			 <form action="POST" autoComplete="new-password">
+			 <form action="POST" autoComplete="new-password" onSubmit={this.handleSubmit} >
 
 				<FormInput 
 				name="email" 

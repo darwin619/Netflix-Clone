@@ -17,19 +17,19 @@ class CollectionGrid extends React.Component  {
 
     render() {
     	const {movieGridItems,tvShowGridItems,movies,tvshow} = this.props;
-	return (
+    	return (
 		<div className="outer-grid">
 		<span><FontAwesomeIcon icon={faChevronLeft} className="left" onClick={() => LeftGridArrow(this.gridRef)} /> </span>
 		 <div className="collection-grid" ref={this.gridRef}>
 	          <div className="grid-preview">	
 				  {     
 				  		movies
-				  	    ? (movieGridItems.map(({id, ...otherProps}) => <CollectionGridItem key={id} {...otherProps} />))
+				  	    ? (movieGridItems.map(item => <CollectionGridItem key={item.id} item={item} />))
 						: null
 				  }
 				  {
 				  		tvshow
-				  		? (tvShowGridItems.map(({id, ...otherProps}) => <CollectionGridItem key={id} {...otherProps} />))
+				  		? (tvShowGridItems.map(item => <CollectionGridItem key={item.id} item={item} />))
 				  		: null
 				  }
     </div>

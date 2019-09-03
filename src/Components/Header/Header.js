@@ -5,8 +5,11 @@ import './Header.scss';
 import {withRouter} from 'react-router';
 import SearchBar from '../SearchBar/SearchBar';
 import { auth } from '../../Firebase/firebase.utils';
+import {selectCurrentUser} from '../../Redux/User/user-selectors';
+import {connect} from 'react-redux';
+import { compose } from 'redux'
 
-const Header = ({history, user}) => {
+const Header = ({history, currentUser, currentRoute}) => {
     return(
         <div className="header">
 		
@@ -30,20 +33,20 @@ const Header = ({history, user}) => {
 
 			<Link 
 			className="option" 
-			to="/contact">
+			to="/mylist">
 		 	My List
 			</Link>
 			
 			<div className="last">
-			<SearchBar />
+			<SearchBar currentRoute={currentRoute} />
 			</div>
 
 
 			{
-				user
-				? (<div><Link className="option">Hi, {user.displayName}</Link>
+				currentUser
+				? (<div><Link className="option"  to="">Hi, {currentUser.displayName}</Link>
 				   <div className="option signout" onClick={() => auth.signOut()} >Sign Out</div></div>)
-				: (<div><Link className="option">Hi, Guest</Link>
+				: (<div><Link className="option"  to="">Hi, Guest</Link>
 				   <Link className="option shift" to="/signin">Sign In</Link></div>)
 			}
 
@@ -52,4 +55,11 @@ const Header = ({history, user}) => {
     );
 }
 
-export default withRouter(Header);
+const mapStateToProps = state => ({
+  currentUser: selectCurrentUser(state)
+});
+
+export default compose(
+  withRouter,
+  connect(mapStateToProps)
+)(Header);

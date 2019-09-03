@@ -1,21 +1,37 @@
 import React from 'react';
 import {IMAGE_BASE_URL, PROFILE_SIZE} from '../../Config/config';
+import Fade from 'react-reveal/Fade';
 
-const ItemPageCast = ({profile_path, name}) => {
+class ItemPageCast extends React.Component {
+     constructor(props) {
+        super(props);
+        this.state = {
+            didLoad: false
+        }
+    }
 
+    onLoad = () => {this.setState({didLoad: true})}
+
+    	render() {
+        const {profile_path, name} = this.props;
         const profileUrl = `${IMAGE_BASE_URL}${PROFILE_SIZE}`
-    	return (
+        const style = this.state.didLoad ? {} : {visibility: 'hidden'}
+        return (
         <div className="cast">
             <div className="image-contain">
                  <img src={`${profileUrl}/${profile_path}`} 
+                    style={style}
                     alt="profile_path" 
                     className="profile" 
+                    onLoad={this.onLoad}
                   />
             </div>
-                <span className="profile-name">{`${name}`}</span>
+                <span style={style} className="profile-name">{`${name}`}</span>
         </div>
+       
     	);
     }
+}
 
 export default ItemPageCast;
 

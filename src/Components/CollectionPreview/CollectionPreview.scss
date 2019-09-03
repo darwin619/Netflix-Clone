@@ -78,7 +78,7 @@
         transform: translateX(-25%);
       }
     }
-    
+
     .box:hover ~ .box {
       transform: translateX(25%);
     }
@@ -86,7 +86,11 @@
     .box:first-child:hover ~ .box {
      transform: translateX(50%);
     }
-    
+
+     .box:last-child:hover ~ .box {
+     transform: translateX(-50%);
+    }
+  
     .box {
       & {
       transition: transform 300ms ease 100ms;
@@ -96,12 +100,18 @@
         transform-origin: left;
       }
 
+      &:last-child {
+        transform-origin: right;
+      }
+
       &:hover {
         transform: scale(1.5);
       }
-      &:hover:first-child {
-        
+      &:hover:first-child {  
         transform: scale(1.5);
+      }
+      &:hover:last-child { 
+        transform: scale(1.25);
       }
   }
 

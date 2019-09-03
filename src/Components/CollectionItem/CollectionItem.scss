@@ -23,7 +23,7 @@
 
 .text{
   position: absolute;
-  bottom:7%;
+  bottom:26%;
   left:2%;
   right: 1%;
   color: #fff;
@@ -34,7 +34,13 @@
   text-shadow: 3px 3px 4px black;
 }
 
-.box:hover .text {
+.box:hover .text,.item-addtolist {
+  visibility: visible;
+  transition: opacity .62s, ease 1s;
+  opacity: 1;
+}
+
+.box:hover .item-addtolist {
   visibility: visible;
   transition: opacity .62s, ease 1s;
   opacity: 1;
@@ -45,24 +51,14 @@
   opacity: 0.5;
 }
 
-.addtolist {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 10px;
-   &:hover {
-}
-}
-
-.fass {
-  padding: 5px;
-  border-radius: 50%;
-   border: 1px solid white;
-   display: inline;
-   margin-right: 5px;
-  &:hover {
-  transition: all 0.2s ease-in;
- transform: scale(1.1);
-}
- 
+.item-addtolist {
+  position: absolute;
+  bottom:7%;
+  left:1.7%;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 10px;
+  text-shadow: 3px 3px 4px black;
+  transition: opacity .62s, ease 1s;
 }

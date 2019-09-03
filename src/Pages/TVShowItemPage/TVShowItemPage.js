@@ -14,7 +14,10 @@ class TVShowItemPage extends React.Component {
 	  render() {
 		return (
 			<div className="movie-item-page">
-				<ItemPageOverview params={this.props.match.params} tvshow />
+				<ItemPageOverview 
+				params={this.props.match.params} 
+				state= {this.props.location ? this.props.location.state : '' } 
+				tvshow />
 		   </div>
 		);
 	}

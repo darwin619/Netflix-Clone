@@ -1,0 +1,125 @@
+@keyframes logo {
+	from {
+		width:100%;
+		opacity:1;
+	}
+	90% {
+		opacity:1;
+	}
+	to {
+		width:0%;
+		opacity:0;
+	}
+}
+@keyframes farfar {
+	0% {
+		opacity:0;
+	}
+	15% {
+		opacity:1;
+	}
+	95% {
+		opacity:1;
+	}
+	100% {
+		opacity:0;
+	}
+}
+@keyframes swcrawl {
+    0% {
+			transform:rotatex(45deg) translateY(470px);
+			opacity:1;
+	}
+		25% {
+			opacity:1;
+		}
+			65% {
+				opacity:1;
+			}
+    100% {
+			opacity:0;
+			transform:rotatex(45deg) translateY(-700px);}
+}
+
+body {										
+	color:#E6CA3A;
+	overflow:hidden;
+}
+.galaxy {
+	display:flex;
+	flex-direction:column;
+	top:0;
+	&  .away {
+	
+		animation-duration:4s;
+		animation-delay:10s;
+		animation-name:farfar;
+		opacity:0;
+		width:170%;
+		font-weight:normal;
+		text-align: center;
+		display: block;
+		position: absolute;
+		left: -40%;
+
+		@media screen and (max-width: 600px) {
+		 
+}
+	}
+	& .logo {
+		margin:auto;
+		text-align:center;
+		
+		width:100%;
+		display:block;
+		position:absolute;
+		top:20%;
+		@media screen and (max-width: 600px) {
+		  top: 30%;
+	}
+}
+	& > div > img {
+		width:100%;
+		opacity:0;
+		animation-name: logo;
+		animation-duration:9s;
+	}
+	& > .fall {
+		width:550px;
+		font-family:'Franklin Gothic Book',sans-serif;
+		font-size:24px;
+		line-height:40px;
+		text-indent:40px;
+		margin:auto;
+		text-align:justify;
+		perspective:400px;
+		font-weight:bold;
+		@media screen and (max-width: 600px) {
+		    width: 200px;
+}
+
+		
+		& > p {
+			margin:auto;
+			width:100%;
+			height:200px;
+			text-align:justify;
+			animation-name:swcrawl;
+			animation-delay:15s;
+			animation-duration:95s;
+			opacity:0;
+			font-weight: lighter;
+			
+			& > i {
+				text-align:center;
+				display:block;
+				width:100%;
+				font-size:37px;
+				margin-bottom:30px;
+				@media screen and (max-width: 600px) {
+				  text-align: center;
+}
+			}
+		}
+	}
+}

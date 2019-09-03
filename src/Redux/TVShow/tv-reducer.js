@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   tvItems: [],
   tvGridItems: [],
   tvCast: [],
-  tvVideos: []
+  tvVideos: ''
 };
 
 const TVReducer = (state = INITIAL_STATE, action) => {
@@ -17,7 +17,7 @@ const TVReducer = (state = INITIAL_STATE, action) => {
 	      return { ...state, tvGridItems: payload };
 	    }
 	     case TVActionTypes.SET_TV_ADDITIONAL_DATA : {
-	      return { ...state, tvCast: payload.credits.cast, tvVideos: payload.videos.results[0].key };
+	      return { ...state, tvCast: payload.credits.cast, tvVideos: payload.videos.results.length ? (payload.videos.results[0].key) : 'no_trailer_found' };
 	    }
 	    default: 
       	  return state 

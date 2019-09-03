@@ -9,13 +9,15 @@ import {getMovies} from '../../Redux/Movie/movie-actions';
 class MovieItemPage extends React.Component {
 	componentDidMount() {
     	this.props.dispatch(getMovies()); 
-		// setTimeout(() => this.props.dispatch(getAdditionalData(this.props.movieItemByTitle[0].id)), 1000)
 	}
 
 	  render() {
 		return (
 			<div className="movie-item-page">
-				<ItemPageOverview params={this.props.match.params} movies />
+				<ItemPageOverview 
+				params={this.props.match.params} 
+				state={this.props.location ? this.props.location.state : '' }
+				movies />
 		   </div>
 		);
 	}
