@@ -6,7 +6,7 @@ import ItemPage from '../../Components/ItemPage/ItemPage';
 import {selectSearchedMovieByTitle,selectSearchedTVShowByTitle} from '../../Redux/Search/search-selectors';
 import {selectListMovieByTitle,selectListTVShowByTitle} from '../../Redux/List/list-selectors';
 
-const ItemPageOverview = ({movieItemByTitle,tvItemByTitle,movies,tvshow,searchedMovieItemByTitle,searchedTvItemByTitle,listMovieItemByTitle,listTvItemByTitle}) => {
+const ItemPageOverview = ({movieItemByTitle,tvItemByTitle,movies,tvshow,searchedMovieItemByTitle,			  searchedTvItemByTitle,listMovieItemByTitle,listTvItemByTitle}) => {
 	return (
 		<div className="item-page-overview">
 			{

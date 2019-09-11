@@ -1,19 +1,20 @@
-import React from 'react';
-import './CollectionOverview.scss';
-import CollectionPreview from '../CollectionPreview/CollectionPreview';
-import CollectionData from './CollectionData';
+import React from "react";
+import "./CollectionOverview.scss";
+import CollectionPreview from "../CollectionPreview/CollectionPreview";
+import CollectionData from "./CollectionData";
 
-const CollectionOverview = ({movies,tvshow}) => {
-	
-return (
-    <div className="collection-overview">
-		{
-			CollectionData.map(items => 
-				<CollectionPreview key={items.id} title={items.title} start={items.start} end={items.end} movies={movies} tvshow={tvshow} />)
-		}
-    </div>
-    
+const CollectionOverview = ({ movies, tvshow }) => (
+  <div className="collection-overview">
+    {CollectionData.map(items => (
+      <CollectionPreview
+        key={items.id}
+        title={items.title}
+        start={items.start}
+        end={items.end}
+        movies={movies}
+        tvshow={tvshow}
+      />
+    ))}
+  </div>
 );
-}
-
 export default CollectionOverview;

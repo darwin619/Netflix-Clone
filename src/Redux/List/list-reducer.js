@@ -1,5 +1,5 @@
-import ListActionTypes from './list-types';
-import {addItemToList, removeItemFromList} from './list-utils';
+import ListActionTypes from "./list-types";
+import { addItemToList, removeItemFromList } from "./list-utils";
 
 const INITIAL_STATE = {
   listItems: []
@@ -16,7 +16,7 @@ const listReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         listItems: removeItemFromList(state.listItems, action.payload)
-      }
+      };
     default:
       return state;
   }

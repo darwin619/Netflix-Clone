@@ -1,64 +1,65 @@
 .box {
-	 position: relative;
+  position: relative;
 }
 
 .movie-image {
-	width: 300px;
+  width: 300px;
   z-index: 1;
 }
 
 .movie-name {
-	color: white;
-	font-size: 0.9rem;
+  color: white;
+  font-size: 0.9rem;
 }
 
 .overview {
-   color: white;
+  color: white;
 }
 
 .more {
-	color: white;
-	display: inline;
+  color: white;
+  display: inline;
 }
 
-.text{
+.text {
   position: absolute;
-  bottom:26%;
-  left:2%;
+  bottom: 26%;
+  left: 2%;
   right: 1%;
   color: #fff;
   visibility: hidden;
   opacity: 0;
-  transition: opacity .62s, ease 1s;
+  transition: opacity 0.62s, ease 1s;
   font-size: 10px;
   text-shadow: 3px 3px 4px black;
 }
 
-.box:hover .text,.item-addtolist {
+.box:hover .text,
+.item-addtolist {
   visibility: visible;
-  transition: opacity .62s, ease 1s;
+  transition: opacity 0.62s, ease 1s;
   opacity: 1;
 }
 
 .box:hover .item-addtolist {
   visibility: visible;
-  transition: opacity .62s, ease 1s;
+  transition: opacity 0.62s, ease 1s;
   opacity: 1;
 }
 
 .box:hover .movie-image {
-  transition: opacity .62s, ease 1s;
+  transition: opacity 0.62s, ease 1s;
   opacity: 0.5;
 }
 
 .item-addtolist {
   position: absolute;
-  bottom:7%;
-  left:1.7%;
+  bottom: 7%;
+  left: 1.7%;
   color: #fff;
   visibility: hidden;
   opacity: 0;
   font-size: 10px;
   text-shadow: 3px 3px 4px black;
-  transition: opacity .62s, ease 1s;
+  transition: opacity 0.62s, ease 1s;
 }

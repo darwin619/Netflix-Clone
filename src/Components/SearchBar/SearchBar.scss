@@ -1,4 +1,4 @@
-.container-2{
+.container-2 {
   width: 300px;
   vertical-align: middle;
   white-space: nowrap;
@@ -7,10 +7,10 @@
   margin-top: 2px;
 }
 
-.container-2 input#search{
+.container-2 input#search {
   width: 40px;
   height: 40px;
-  background:#141414;
+  background: #141414;
   border: none;
   font-size: 14px;
   float: left;
@@ -20,51 +20,54 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
-  outline:none;
+  outline: none;
   width: 300px;
-  background:black;
- 
-  -webkit-transition: width .55s ease;
-  -moz-transition: width .55s ease;
-  -ms-transition: width .55s ease;
-  -o-transition: width .55s ease;
-  transition: width .55s ease;
+  background: black;
+
+  -webkit-transition: width 0.55s ease;
+  -moz-transition: width 0.55s ease;
+  -ms-transition: width 0.55s ease;
+  -o-transition: width 0.55s ease;
+  transition: width 0.55s ease;
 }
 
 .container-2 input#search::-webkit-input-placeholder {
-   color: #65737e;
-}
- 
-.container-2 input#search:-moz-placeholder { /* Firefox 18- */
-   color: #65737e;  
-}
- 
-.container-2 input#search::-moz-placeholder {  /* Firefox 19+ */
-   color: #65737e;  
-}
- 
-.container-2 input#search:-ms-input-placeholder {  
-   color: #65737e;  
+  color: #65737e;
 }
 
-.container-2 .icon{
+.container-2 input#search:-moz-placeholder {
+  /* Firefox 18- */
+  color: #65737e;
+}
+
+.container-2 input#search::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #65737e;
+}
+
+.container-2 input#search:-ms-input-placeholder {
+  color: #65737e;
+}
+
+.container-2 .search-icon {
   position: absolute;
   top: 50%;
+  left: 0%;
   margin-left: 11px;
   margin-top: 11px;
   z-index: 1;
-  color: #E5E5E5;
-  
+  color: #e5e5e5;
 }
 
-.container-2 input#search:focus, .container-2 input#search:active{
- color: white;
+.container-2 input#search:focus,
+.container-2 input#search:active {
+  color: white;
 }
- 
-.container-2:hover input#search{
-color: white;
+
+.container-2:hover input#search {
+  color: white;
 }
- 
-.container-2:hover .icon{
+
+.container-2:hover .search-icon {
   color: #93a2ad;
 }

@@ -3,16 +3,12 @@ export const addItemToList = (listItems, listItemToAdd) => {
     listItem => listItem.id === listItemToAdd.id
   );
 
-  if (existingListItem) 
-    return listItems;
-
+  if (existingListItem) return listItems;
   else {
-    return [...listItems, { ...listItemToAdd} ];
+    return [...listItems, { ...listItemToAdd }];
   }
-}
+};
 
 export const removeItemFromList = (listItems, listItemToRemove) => {
-  return (
-    listItems.filter(items => 
-      items.id !== listItemToRemove.id));
-}
+  return listItems.filter(items => items.id !== listItemToRemove.id);
+};
