@@ -28,13 +28,6 @@ class CollectionGrid extends React.Component {
             onClick={() => LeftGridArrow(this.gridRef)}
           />
         </span>
-        <span>
-          <FontAwesomeIcon
-            icon={faChevronRight}
-            className="right"
-            onClick={() => RightGridArrow(this.gridRef)}
-          />
-        </span>
         <div className="collection-grid" ref={this.gridRef}>
           <div className="grid-preview">
             {movies
@@ -48,7 +41,15 @@ class CollectionGrid extends React.Component {
                 ))
               : null}
           </div>
+          <span>
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className="right"
+            onClick={() => RightGridArrow(this.gridRef)}
+          />
+        </span>
         </div>
+
       </div>
     );
   }

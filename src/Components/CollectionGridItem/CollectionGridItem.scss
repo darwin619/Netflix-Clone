@@ -18,6 +18,13 @@
 .grid-image {
   width: 100vw;
   height: auto;
+
+  @media screen and (max-width: 800px) {
+    width: 170vw; 
+    height: 100%; 
+    object-fit: contain;
+    object-position: -135px;
+  }
 }
 
 .grid-overview {
@@ -36,9 +43,10 @@
   line-height: 25px;
 
   @media screen and (max-width: 800px) {
-    font-size: 9px;
-    line-height: 12px;
-    bottom: 12%;
+    font-size: 11px;
+    line-height: 14px;
+    bottom: 9%;
+    right: 5%;
   } 
 }
 

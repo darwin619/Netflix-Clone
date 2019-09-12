@@ -5,15 +5,27 @@
 .movie-image {
   width: 300px;
   z-index: 1;
+
+   @media screen and (max-width: 800px) {
+    width: 200px;
+  } 
 }
 
 .movie-name {
   color: white;
   font-size: 0.9rem;
+
+   @media screen and (max-width: 800px) {
+    font-size: 0.6rem;
+  } 
 }
 
 .overview {
   color: white;
+
+  @media screen and (max-width: 800px) {
+    font-size: 0.6rem;
+  }
 }
 
 .more {
@@ -32,10 +44,17 @@
   transition: opacity 0.62s, ease 1s;
   font-size: 10px;
   text-shadow: 3px 3px 4px black;
+
+  @media screen and (max-width: 800px) {
+    bottom: 30%;
+    left: 7%;
+    right: 5%;
+  }
 }
 
-.box:hover .text,
-.item-addtolist {
+@media screen and (min-width: 800px) {
+
+.box:hover .text {
   visibility: visible;
   transition: opacity 0.62s, ease 1s;
   opacity: 1;
@@ -51,6 +70,27 @@
   transition: opacity 0.62s, ease 1s;
   opacity: 0.5;
 }
+}
+
+@media screen and (max-width: 800px) {
+
+.box:active .text {
+  visibility: visible;
+  transition: opacity 0.62s, ease 1s;
+  opacity: 1;
+}
+
+.box:active .item-addtolist {
+  visibility: visible;
+  transition: opacity 0.62s, ease 1s;
+  opacity: 1;
+}
+
+.box:active .movie-image {
+  transition: opacity 0.62s, ease 1s;
+  opacity: 0.5;
+}
+}
 
 .item-addtolist {
   position: absolute;
@@ -62,4 +102,8 @@
   font-size: 10px;
   text-shadow: 3px 3px 4px black;
   transition: opacity 0.62s, ease 1s;
+
+  @media screen and (max-width: 800px) {
+    left: 5.8%;
+  }
 }

@@ -6,6 +6,10 @@
   position: relative;
   overflow: hidden;
 
+  @media screen and (max-width: 800px) {
+    height: 210px;
+  }
+
   .title-container {
     display: inline-block;
     position: relative;
@@ -15,6 +19,10 @@
   .title {
     font-size: 1.4rem;
     margin-left: 3px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+  }
   }
 
   .collection-box {
@@ -34,6 +42,10 @@
       cursor: pointer;
       color: white;
 
+      @media screen and (max-width: 800px) {
+        height: 77%;
+  }
+
       &:hover {
         font-size: 3rem;
         color: white;
@@ -52,6 +64,11 @@
       opacity: 1;
       cursor: pointer;
       color: white;
+
+      @media screen and (max-width: 800px) {
+        height: 77%;
+  }
+
       &:hover {
         font-size: 3rem;
         color: white;
