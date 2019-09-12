@@ -35,7 +35,7 @@ $main-color: black;
     }
   }
 
-  input[type='password'] {
+  input[type="password"] {
     letter-spacing: 0.3em;
   }
 
@@ -46,13 +46,12 @@ $main-color: black;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
-    left:70px;
+    left: 70px;
     top: 25px;
     transition: 300ms ease all;
 
     &.shrink {
       @include shrinkLabel();
     }
-
   }
 }

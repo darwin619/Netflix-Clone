@@ -5,18 +5,17 @@
   margin-top: 15px;
   transition: all 0.4s ease-in;
   text-shadow: 3px 3px 4px black;
-
 }
 
 .fass {
-   padding: 5px;
-   border-radius: 50%;
-   border: 1px solid white;
-   display: inline;
-   margin-right: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: inline;
+  margin-right: 5px;
 
-   &:hover {
-     transition: all 0.2s ease-in;
-     transform: scale(1.1);
-}
+  &:hover {
+    transition: all 0.2s ease-in;
+    transform: scale(1.1);
+  }
 }

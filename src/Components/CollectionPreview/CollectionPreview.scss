@@ -5,117 +5,113 @@
   height: 270px;
   position: relative;
   overflow: hidden;
-  
-  
-.title-container {
-  display: inline-block;
-  position: relative;
-  left: 0%;
-}
 
-.title {
-	font-size: 1.4rem;
-	margin-left: 3px;
-}
+  .title-container {
+    display: inline-block;
+    position: relative;
+    left: 0%;
+  }
 
-.collection-box {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  position: relative;
+  .title {
+    font-size: 1.4rem;
+    margin-left: 3px;
+  }
 
-
-.left-controls {
-   position: absolute;
-  height: 105%;
-  display: flex;
-  align-items: center;
-  font-size: 2.5rem;
-  z-index: 40;
-  opacity:1;
-  cursor: pointer;
-  color: white;
-  
-   &:hover {
-       font-size: 3rem;
-       color: white;
-       transition: all 0.2s ease;
-      } 
-}
-
-.right-controls {
-  position: absolute;
-  height: 105%;
-  right: 0%;
-  display: flex;
-  align-items: center;
-  font-size: 2.5rem;
-  z-index: 40;
-  opacity:1;
-  cursor: pointer;
-  color: white;
-   &:hover {
-       font-size: 3rem;
-       color: white;
-       transition: all 0.2s ease;
-      } 
-}
-
-.preview-container {
-   overflow-x: hidden;
-   overflow-y: hidden;
-   height: 270px;
-   display: flex;
-   flex-direction: column;
-}
-
-  .preview {
+  .collection-box {
     display: flex;
+    flex-direction: row;
     cursor: pointer;
+    position: relative;
 
-    &:hover {
-      .box {
-        transform: translateX(-25%);
-      }
-    }
-
-    .box:hover ~ .box {
-      transform: translateX(25%);
-    }
-
-    .box:first-child:hover ~ .box {
-     transform: translateX(50%);
-    }
-
-     .box:last-child:hover ~ .box {
-     transform: translateX(-50%);
-    }
-  
-    .box {
-      & {
-      transition: transform 300ms ease 100ms;
-    }
-
-      &:first-child {
-        transform-origin: left;
-      }
-
-      &:last-child {
-        transform-origin: right;
-      }
+    .left-controls {
+      position: absolute;
+      height: 105%;
+      display: flex;
+      align-items: center;
+      font-size: 2.5rem;
+      z-index: 40;
+      opacity: 1;
+      cursor: pointer;
+      color: white;
 
       &:hover {
-        transform: scale(1.5);
+        font-size: 3rem;
+        color: white;
+        transition: all 0.2s ease;
       }
-      &:hover:first-child {  
-        transform: scale(1.5);
-      }
-      &:hover:last-child { 
-        transform: scale(1.25);
-      }
-  }
+    }
 
-}
-}
+    .right-controls {
+      position: absolute;
+      height: 105%;
+      right: 0%;
+      display: flex;
+      align-items: center;
+      font-size: 2.5rem;
+      z-index: 40;
+      opacity: 1;
+      cursor: pointer;
+      color: white;
+      &:hover {
+        font-size: 3rem;
+        color: white;
+        transition: all 0.2s ease;
+      }
+    }
 
+    .preview-container {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .preview {
+      display: flex;
+      cursor: pointer;
+
+      &:hover {
+        .box {
+          transform: translateX(-25%);
+        }
+      }
+
+      .box:hover ~ .box {
+        transform: translateX(25%);
+      }
+
+      .box:first-child:hover ~ .box {
+        transform: translateX(50%);
+      }
+
+      .box:last-child:hover ~ .box {
+        transform: translateX(-50%);
+      }
+
+      .box {
+        & {
+          transition: transform 300ms ease 100ms;
+        }
+
+        &:first-child {
+          transform-origin: left;
+        }
+
+        &:last-child {
+          transform-origin: right;
+        }
+
+        &:hover {
+          transform: scale(1.5);
+        }
+        &:hover:first-child {
+          transform: scale(1.5);
+        }
+        &:hover:last-child {
+          transform: scale(1.25);
+        }
+      }
+    }
   }
+}

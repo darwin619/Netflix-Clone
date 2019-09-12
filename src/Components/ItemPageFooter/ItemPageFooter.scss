@@ -1,65 +1,62 @@
 .cast {
-	display: flex;
-	flex-direction: column;
-	width: 120px;
-	margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  margin-right: 30px;
 }
 
 .item-page-container {
-	display: flex;
-	flex-direction: row;
-	margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
 }
 
 .image-contain {
-	display: flex;
-	justify-content: center;
-	width: 120px;
-
+  display: flex;
+  justify-content: center;
+  width: 120px;
 }
 
 .profile {
-	width: 80px;
-	box-shadow:
-	  0  0px 20px rgba(154,160,185,0.05),
-	  0 0px 8px rgba(166,173,201,0.2);
-	  padding: 3px;
+  width: 80px;
+  box-shadow: 0 0px 20px rgba(154, 160, 185, 0.05),
+    0 0px 8px rgba(166, 173, 201, 0.2);
+  padding: 3px;
 }
 
 .profile-name {
-	text-align: center;
+  text-align: center;
 }
 
 .buttons {
-	margin-top: 25px;
+  margin-top: 25px;
 }
 
-.btn {  
-    border: none;
-    border-radius: 2px;
-    font-size: 0.90rem;
-    padding: 9px 11px;
-    background-color: rgba(51,51,51,.4);;
-   border: none;
-    font-weight: 400;
-    margin-right: 30px;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all 0.3s;
-    color: white;
-    width: 150px;
-    cursor: pointer;
-    @media screen and (max-width: 600px) {
-        margin-left:auto;
-        margin-right:auto;
-}
+.btn {
+  border: none;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  padding: 9px 11px;
+  background-color: rgba(51, 51, 51, 0.4);
+  border: none;
+  font-weight: 400;
+  margin-right: 30px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s;
+  color: white;
+  width: 150px;
+  cursor: pointer;
+  @media screen and (max-width: 600px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .btn:hover {
-    background-color: rgba(255,255,255, 0.2);
-
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .icon {
-    margin-right: 4px;
+  margin-right: 4px;
 }

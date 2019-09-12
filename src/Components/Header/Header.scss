@@ -8,12 +8,28 @@
   z-index: 40;
   top: 0;
 
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    position: relative;
+    height: 120px;
+  }
+
+  .logo-container {
+  @media screen and (max-width: 800px) {
+     margin: 0 auto;
+  } 
+  }
+
   .logo {
     height: 100%;
     width: 120px;
     margin-left: 20px;
     cursor: pointer;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 800px) {
+      margin: unset;
+    } 
   }
 
   .options {
@@ -21,7 +37,16 @@
     height: 100%;
     display: flex;
     align-items: center;
-    
+
+    @media screen and (max-width: 800px) {
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 25px;
+      height: 200px;
+      justify-content: center;
+    } 
 
     .option {
       padding: 10px 12px;
@@ -30,32 +55,47 @@
       font-weight: 550;
       background-color: transparent;
       cursor: pointer;
-      color: #E5E5E5;
+      color: #e5e5e5;
       text-decoration: none;
       line-height: 1.2;
-     -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;
+
+      @media screen and (max-width: 800px) {
+        padding: 5px 6px;
+        font-size: 13px;
+    } 
 
       &:hover {
-        color: #A9A9A9;
+        color: #a9a9a9;
         transition: 0.4s all;
       }
-
     }
-}
+  }
 
   .last {
-        margin-left: auto;
-        margin-right: 15px;
+    margin-left: auto;
+    margin-right: 15px;  
+
+     @media screen and (max-width: 800px) {
+      margin: unset;
+      position: absolute;
+      top: 90%;
+      left: 5%;
+    } 
   }
 
   .shift {
-        margin-right: 25px;
+    margin-right: 25px;
+    @media screen and (max-width: 800px) {
+      margin: unset;
+    }
   }
 
   .signout {
     display: inline;
     margin-right: 15px;
+    @media screen and (max-width: 800px) {
+      margin: unset;
+    }
   }
-
-
 }

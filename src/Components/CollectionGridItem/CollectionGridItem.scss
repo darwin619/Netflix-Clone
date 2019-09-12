@@ -1,43 +1,61 @@
 .grid-item {
-	 width: 100%;
-   position: relative;
+  width: 100%;
+  position: relative;
 
-   &:last-child {
+  &:last-child {
     .grid-movie-text {
-      bottom:38%;
+      bottom: 38%;
     }
-   }
+  }
+}
+
+.grid-name {
+   @media screen and (max-width: 800px) {
+    font-size: 16px;
+  } 
 }
 
 .grid-image {
-	 width: 100vw;  
-   height: auto;
+  width: 100vw;
+  height: auto;
 }
 
 .grid-overview {
-   color: white;
+  color: white;
 }
 
 .grid-movie-text {
   position: absolute;
-  bottom:32%;
-  left:5%;
+  bottom: 32%;
+  left: 5%;
   cursor: pointer;
   right: 5%;
   color: #fff;
   font-size: 18px;
   text-shadow: 3px 3px 4px black;
   line-height: 25px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 9px;
+    line-height: 12px;
+    bottom: 12%;
+  } 
 }
 
 .grid-tv-text {
   position: absolute;
-  bottom:41%;
-  left:5%;
+  bottom: 41%;
+  left: 5%;
   cursor: pointer;
   right: 5%;
   color: #fff;
   font-size: 18px;
   text-shadow: 3px 3px 4px black;
   line-height: 25px;
+
+   @media screen and (max-width: 800px) {
+    font-size: 9px;
+    line-height: 12px;
+    bottom: 15%;
+  } 
 }

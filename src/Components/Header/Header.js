@@ -17,6 +17,7 @@ const Header = ({ history, currentUser, currentRoute }) => {
       </div>
 
       <div className="options">
+       <div className="options-primary">
         <Link className="option" to="/movies">
           Movies
         </Link>
@@ -28,13 +29,14 @@ const Header = ({ history, currentUser, currentRoute }) => {
         <Link className="option" to="/mylist">
           My List
         </Link>
+      </div>
 
         <div className="last">
           <SearchBar currentRoute={currentRoute} />
         </div>
 
         {currentUser ? (
-          <div>
+          <div className="options-secondary">
             <Link className="option" to="">
               Hi, {currentUser.displayName}
             </Link>
@@ -43,7 +45,7 @@ const Header = ({ history, currentUser, currentRoute }) => {
             </div>
           </div>
         ) : (
-          <div>
+          <div className="options-secondary">
             <Link className="option" to="">
               Hi, Guest
             </Link>

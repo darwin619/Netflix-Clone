@@ -3,19 +3,22 @@
   flex-direction: row;
   position: relative;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 60px;
+  } 
 }
 
 .collection-grid {
- margin: 0;
- padding: 0;
- width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   overflow-x: hidden;
 }
 
 .grid-preview {
-   display: inline-flex;
+  display: inline-flex;
   flex-direction: row;
-
 }
 
 .left {
@@ -29,11 +32,11 @@
   opacity: 0.8;
   cursor: pointer;
   color: white;
-    &:hover {
-      font-size: 3.5rem;
-       color: white;
-       transition: all 0.2s ease;
-      } 
+  &:hover {
+    font-size: 3.5rem;
+    color: white;
+    transition: all 0.2s ease;
+  }
 }
 
 .right {
@@ -47,9 +50,9 @@
   opacity: 0.8;
   cursor: pointer;
   color: white;
-   &:hover {
-       font-size: 3.5rem;
-       color: white;
-       transition: all 0.2s ease;
-      }
+  &:hover {
+    font-size: 3.5rem;
+    color: white;
+    transition: all 0.2s ease;
+  }
 }
