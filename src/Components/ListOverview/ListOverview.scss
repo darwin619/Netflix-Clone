@@ -8,6 +8,13 @@
   font-size: 1.7rem;
   margin-bottom: 40px;
   text-transform: capitalize;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 180px;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-left: unset;
+  }
 }
 
 .list-items-grid {

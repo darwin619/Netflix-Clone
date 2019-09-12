@@ -25,6 +25,11 @@
   height: 360px;
   cursor: pointer;
   transition: opacity 0.4s, ease 0.6s;
+
+  @media screen and (max-width: 800px) {
+    width: 200px;
+    height: 320px;
+  }
 }
 
 .list-movie-name {
