@@ -20,10 +20,17 @@
   height: auto;
 
   @media screen and (max-width: 800px) {
-    width: 170vw; 
-    height: 100%; 
-    object-fit: contain;
-    object-position: -135px;
+    display: none;
+  }
+}
+
+.grid-mobile {
+   @media screen and (min-width: 800px) {
+    display: none;
+  }
+   @media screen and (max-width: 800px) {
+    display: block;
+    height: 80vh;
   }
 }
 
@@ -43,10 +50,11 @@
   line-height: 25px;
 
   @media screen and (max-width: 800px) {
-    font-size: 11px;
-    line-height: 14px;
-    bottom: 9%;
-    right: 5%;
+    font-size: 14px;
+    line-height: 22px;
+    bottom: 22%;
+    right: 10%;
+    left: 12%;
   } 
 }
 

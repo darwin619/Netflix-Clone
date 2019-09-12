@@ -7,7 +7,7 @@
   z-index: 1;
 
    @media screen and (max-width: 800px) {
-    width: 200px;
+    width: 230px;
   } 
 }
 
@@ -46,33 +46,9 @@
   text-shadow: 3px 3px 4px black;
 
   @media screen and (max-width: 800px) {
-    bottom: 30%;
-    left: 7%;
-    right: 5%;
+    display: none;
   }
 }
-
-@media screen and (min-width: 800px) {
-
-.box:hover .text {
-  visibility: visible;
-  transition: opacity 0.62s, ease 1s;
-  opacity: 1;
-}
-
-.box:hover .item-addtolist {
-  visibility: visible;
-  transition: opacity 0.62s, ease 1s;
-  opacity: 1;
-}
-
-.box:hover .movie-image {
-  transition: opacity 0.62s, ease 1s;
-  opacity: 0.5;
-}
-}
-
-@media screen and (max-width: 800px) {
 
 .box:active .text {
   visibility: visible;
@@ -90,7 +66,6 @@
   transition: opacity 0.62s, ease 1s;
   opacity: 0.5;
 }
-}
 
 .item-addtolist {
   position: absolute;
@@ -104,6 +79,6 @@
   transition: opacity 0.62s, ease 1s;
 
   @media screen and (max-width: 800px) {
-    left: 5.8%;
+    display: none;
   }
 }
