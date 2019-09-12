@@ -12,16 +12,20 @@ export const getMoviesSuccess = () => ({
 export function getMovies() {
   return dispatch => {
     fetchData().then(data => {
-      const movieData = data.flatMap(({ results }) => results);
+      const movieData = data.map(({ results }) => results);
+      var newArray = Array.prototype.concat.apply([], movieData);
+      console.log(data)
+      console.log(newArray)
       dispatch({ 
         type: MovieActionTypes.SET_MOVIE_DATA, 
-        payload: movieData });
+        payload: newArray });
     });
     fetchGrid().then(data => {
-      const movieGridData = data.flatMap(({ results }) => results[0]);
+      const movieGridData = data.map(({ results }) => results[0]);
+      var newArray = Array.prototype.concat.apply([], movieGridData);
       dispatch({
         type: MovieActionTypes.SET_MOVIE_GRID_DATA,
-        payload: movieGridData
+        payload: newArray
       });
       dispatch(getMoviesSuccess());
     });

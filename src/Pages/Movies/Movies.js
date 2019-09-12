@@ -15,7 +15,6 @@ class Movies extends React.Component {
 
   render() {
     const {isFetching} = this.props;
-    console.log(this.props.isFetching);
     return (
       <div className="movies">
         <CollectionGridMovie movies />

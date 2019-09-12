@@ -9,17 +9,19 @@ export const getTvShowsSuccess = () => ({
 export function getTvShows() {
   return dispatch => {
     fetchData().then(data => {
-      const TVData = data.flatMap(({ results }) => results);
+      const TVData = data.map(({ results }) => results);
+      var newArray = Array.prototype.concat.apply([], TVData);
       dispatch({ 
         type: TVActionTypes.SET_TV_DATA, 
-        payload: TVData 
+        payload: newArray 
       });
     });
     fetchTvShowsGrid().then(data => {
-      const TVGridData = data.flatMap(({ results }) => results[0]);
+      const TVGridData = data.map(({ results }) => results[0]);
+      var newArray = Array.prototype.concat.apply([], TVGridData);
       dispatch({ 
         type: TVActionTypes.SET_TV_GRID_DATA, 
-        payload: TVGridData 
+        payload: newArray
       });
       dispatch(getTvShowsSuccess());
     });
