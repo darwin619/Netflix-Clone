@@ -56,11 +56,11 @@ class SignUp extends React.Component {
     return (
       <div className="signup">
         <div
-          className="background-image"
+          className="signup-bg"
           style={{ backgroundImage: `url(${Background})` }}
         />
-        <div className="form-container">
-          <div className="form-shadow">
+        <div className="signup-container">
+          <div className="signup-shadow">
             <h1 className="signup-title">Sign Up</h1>
 
             <form action="POST" onSubmit={this.handleSubmit}>
@@ -100,8 +100,8 @@ class SignUp extends React.Component {
                 required
               />
 
-              <div className="buttons-container">
-                <div className="customButton">
+              <div className="signup-btn-container">
+                <div className="signup-btn">
                   <CustomButton type="submit"> Sign Up </CustomButton>
                 </div>
               </div>

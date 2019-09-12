@@ -3,12 +3,29 @@
   height: 100vh;
   position: relative;
 
-  .background-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    filter: blur(2px);
+  @media screen and (max-width: 800px) { 
+    overflow-x: hidden;
   }
+
+  .background-image {
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  @media screen and (max-width: 800px) { /* Specific to this particular image */
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
 
   .item {
     width: 100%;
@@ -23,19 +40,45 @@
     width: 1000px;
     position: absolute;
     top: 0;
+
+    @media screen and (max-width: 800px) { 
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 1000px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   }
+  }
+
+.image-container {
+  @media screen and (max-width: 800px) { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
 
   .poster {
     width: 365px;
     height: 530px;
     filter: brightness(105%);
     filter: contrast(110%);
+
+    @media screen and (max-width: 800px) { 
+      width: 250px;
+      height: auto;
+      margin: 20px auto;
+  }
   }
 
   .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media screen and (max-width: 800px) { 
+      flex-direction: column;
+  }
   }
 
   .text-box {
@@ -48,6 +91,14 @@
     padding: 5px;
     font-family: sans-serif;
     text-shadow: 3px 3px 4px black;
+
+    @media screen and (max-width: 800px) { 
+      margin: unset;
+      margin: 0 auto;
+      width: 90%;
+      text-align: center;
+      padding-bottom: 15px;
+  }
   }
 
   .item-name {
@@ -71,6 +122,10 @@
     align-items: center;
     margin-top: 15px;
     border-radius: 5px;
+
+     @media screen and (max-width: 800px) { 
+       padding-top: 15px;
+  }
   }
 
   .rank {
@@ -96,5 +151,9 @@
   .cast-title {
     font-size: 1.2rem;
     text-decoration: underline;
+
+     @media screen and (max-width: 800px) { 
+       padding-top: 10px;
+  }
   }
 }

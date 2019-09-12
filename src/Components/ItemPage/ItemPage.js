@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  IMAGE_BASE_URL,
-  BACKDROP_SIZE,
-  POSTER_SIZE
-} from "../../Config/config";
+import { IMAGE_BASE_URL,BACKDROP_SIZE,POSTER_SIZE } from "../../Config/config";
 import "./ItemPage.scss";
 import { connect } from "react-redux";
 import imdb from "../../Assets/imdb.png";
 import star from "../../Assets/star.png";
-import {
-  selectMovieCast,
-  selectMovieVideos
-} from "../../Redux/Movie/movie-selectors";
+import { selectMovieCast,selectMovieVideos } from "../../Redux/Movie/movie-selectors";
 import ItemPageFooter from "../ItemPageFooter/ItemPageFooter";
 import { getAdditionalMovieData } from "../../Redux/Movie/movie-actions";
 import { getAdditionalTVData } from "../../Redux/TVShow/tv-actions";
@@ -38,10 +31,7 @@ class ItemPage extends React.Component {
     const poster = `${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`;
     return (
       <div className="item-page">
-        <div
-          className="background-image"
-          style={{ backgroundImage: `url(${background})` }}
-        />
+        <img src={`${background}`} alt="background" className="background-image" />
         <div className="item">
           <Fade>
             <div className="item-container">

@@ -2,7 +2,7 @@ import UserActionTypes from './user-types';
 
 const INITIAL_STATE = {
 	currentUser: null,
-	snap: false
+	hidden: true
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -12,10 +12,10 @@ const userReducer = (state = INITIAL_STATE, action) => {
 			...state,
 			currentUser: action.payload
 		};
-		case UserActionTypes.SET_SNAP: 
+		case UserActionTypes.TOGGLE_HIDDEN_MENU: 
 		return {
 			...state,
-			snap: !state.snap
+			hidden: !state.hidden
 		};
 		default:
 		return state;

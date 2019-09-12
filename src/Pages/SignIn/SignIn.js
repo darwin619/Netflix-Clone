@@ -40,11 +40,11 @@ class SignIn extends React.Component {
     return (
       <div className="signin">
         <div
-          className="background-image"
+          className="signin-bg"
           style={{ backgroundImage: `url(${Background})` }}
         />
-        <div className="form-container">
-          <div className="form-shadow">
+        <div className="signin-container">
+          <div className="signin-shadow">
             <h1 className="signin-title">Sign In</h1>
 
             <form
@@ -70,8 +70,8 @@ class SignIn extends React.Component {
                 required
               />
 
-              <div className="buttons-container">
-                <div className="customButton">
+              <div className="signin-btn-container">
+                <div className="signin-btn">
                   <CustomButton type="submit" signin>
                     {" "}
                     Sign In{" "}

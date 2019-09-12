@@ -7,8 +7,8 @@ export const setCurrentUser = (user) => {
 	});
 }
 
-export const setSnap = () => {
+export const ToggleMenuHidden = () => {
 	return ({
-		type: UserActionTypes.SET_SNAP
+		type: UserActionTypes.TOGGLE_HIDDEN_MENU
 	});
 }

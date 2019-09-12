@@ -1,12 +1,9 @@
 import React from "react";
 import "./Footer.scss";
-import Thanos from "react-thanos";
-import { setSnap } from "../../Redux/User/user-actions";
-import { connect } from "react-redux";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Footer = ({ setSnap }) => {
+const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-text">
@@ -25,11 +22,5 @@ const Footer = ({ setSnap }) => {
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  setSnap: () => dispatch(setSnap())
-});
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Footer);
+export default Footer;

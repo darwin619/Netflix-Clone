@@ -5,11 +5,15 @@ import "./Header.scss";
 import { withRouter } from "react-router";
 import SearchBar from "../SearchBar/SearchBar";
 import { auth } from "../../Firebase/firebase.utils";
-import { selectCurrentUser } from "../../Redux/User/user-selectors";
+import { selectCurrentUser, selectToggleHidden } from "../../Redux/User/user-selectors";
+import { ToggleMenuHidden } from '../../Redux/User/user-actions';
 import { connect } from "react-redux";
 import { compose } from "redux";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import NavMenu from './NavMenu';
 
-const Header = ({ history, currentUser, currentRoute }) => {
+const Header = ({ history, currentUser, currentRoute, hidden, ToggleMenuHidden}) => {
   return (
     <div className="header">
       <div className="logo-container" onClick={() => history.push("/movies")}>
@@ -55,15 +59,22 @@ const Header = ({ history, currentUser, currentRoute }) => {
           </div>
         )}
       </div>
+      <FontAwesomeIcon icon={faBars} className="nav-menu-icon" onClick={ToggleMenuHidden} />
+      {hidden ? null : <NavMenu />}
     </div>
   );
 };
 
 const mapStateToProps = state => ({
-  currentUser: selectCurrentUser(state)
+  currentUser: selectCurrentUser(state),
+  hidden: selectToggleHidden(state)
+});
+
+const mapDispatchToProps = dispatch => ({
+  ToggleMenuHidden: () => dispatch(ToggleMenuHidden())
 });
 
 export default compose(
   withRouter,
-  connect(mapStateToProps)
+  connect(mapStateToProps, mapDispatchToProps)
 )(Header);

@@ -1,0 +1,65 @@
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  opacity: 0.95;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+  animation: moveToBottom 0.7s ease-out;
+
+     @keyframes moveToBottom {
+      0% {
+        opacity: 0;
+        transform: translateX(-20rem); }
+      100% {
+        opacity: 1;
+        transform: translateX(0); } }
+}
+
+
+
+.overlay-content {
+  position: absolute;
+  top: 17%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay a {
+  padding-bottom: 36px;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.exit-menu-icon {
+  color: white;
+  font-size: 32px;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  transition: all 0.3s ease;
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+.netflix_profile {
+  width: 50px;
+  margin: 15px auto;
+}
+
+

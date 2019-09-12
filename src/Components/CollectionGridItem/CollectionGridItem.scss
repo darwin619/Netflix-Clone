@@ -4,13 +4,13 @@
 
   &:last-child {
     .grid-movie-text {
-      bottom: 38%;
+      bottom: 30%;
     }
   }
 }
 
 .grid-name {
-   @media screen and (max-width: 800px) {
+   @media screen and (max-width: 600px) {
     font-size: 16px;
   } 
 }
@@ -51,8 +51,8 @@
 
   @media screen and (max-width: 800px) {
     font-size: 15px;
-    line-height: 22px;
-    bottom: 7%;
+    line-height: 21px;
+    bottom: 17%;
     right: 10%;
     left: 12%;
   } 
@@ -70,8 +70,10 @@
   line-height: 25px;
 
    @media screen and (max-width: 800px) {
-    font-size: 9px;
-    line-height: 12px;
-    bottom: 15%;
+    font-size: 15px;
+    line-height: 22px;
+    bottom: 32%;
+    right: 10%;
+    left: 12%;
   } 
 }

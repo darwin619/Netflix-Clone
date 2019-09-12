@@ -1,6 +1,6 @@
 const UserActionTypes = {
 	SET_CURRENT_USER: 'SET_CURRENT_USER',
-	SET_SNAP: 'SET_SNAP'
+	TOGGLE_HIDDEN_MENU: 'TOGGLE_HIDDEN_MENU'
 }
 
 export default UserActionTypes;

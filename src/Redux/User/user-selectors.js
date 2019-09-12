@@ -7,7 +7,7 @@ export const selectCurrentUser = createSelector(
   user => user.currentUser
 );
 
-export const selectSnap = createSelector(
+export const selectToggleHidden = createSelector(
   [selectUser],
-  user => user.snap
+  user => user.hidden
 );

@@ -31,6 +31,12 @@
     } 
   }
 
+  .options-primary, .options-secondary {
+    @media screen and (max-width: 800px) {
+      display: none;
+    } 
+  }
+
   .options {
     width: 88%;
     height: 100%;
@@ -78,8 +84,8 @@
      @media screen and (max-width: 800px) {
       margin: unset;
       position: absolute;
-      top: 90%;
-      left: 5%;
+      top: 70%;
+      margin: 0 auto;
     } 
   }
 
@@ -97,4 +103,26 @@
       margin: unset;
     }
   }
+
+.nav-menu-icon {
+
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}
 }
