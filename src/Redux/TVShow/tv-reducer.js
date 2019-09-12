@@ -1,6 +1,7 @@
 import TVActionTypes from "./tv-types";
 
 const INITIAL_STATE = {
+  isFetching: true,
   tvItems: [],
   tvGridItems: [],
   tvCast: [],
@@ -15,6 +16,9 @@ const TVReducer = (state = INITIAL_STATE, action) => {
     }
     case TVActionTypes.SET_TV_GRID_DATA: {
       return { ...state, tvGridItems: payload };
+    }
+    case TVActionTypes.SET_TV_DATA_SUCCESS: {
+      return { ...state, isFetching: false };
     }
     case TVActionTypes.SET_TV_ADDITIONAL_DATA: {
       return {

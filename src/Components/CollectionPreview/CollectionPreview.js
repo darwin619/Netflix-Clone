@@ -5,10 +5,7 @@ import CollectionItem from "../CollectionItem/CollectionItem";
 import { connect } from "react-redux";
 import { selectMovieItems } from "../../Redux/Movie/movie-selectors";
 import { selectTVItems } from "../../Redux/TVShow/tv-selectors";
-import {
-  faChevronLeft,
-  faChevronRight
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TitleHide } from "../../Utils/TitleHide";
 import { LeftArrow, RightArrow } from "../../Utils/ScrollArrows";
@@ -22,7 +19,7 @@ class CollectionPreview extends React.Component {
 
   componentDidMount() {
     var node = ReactDOM.findDOMNode(this);
-    TitleHide(node);
+    TitleHide(node)
   }
 
   onLeftClick = () => {
@@ -34,15 +31,7 @@ class CollectionPreview extends React.Component {
   };
 
   render() {
-    const {
-      title,
-      movieItems,
-      tvItems,
-      start,
-      end,
-      movies,
-      tvshow
-    } = this.props;
+    const {title,movieItems,tvItems,start,end,movies,tvshow} = this.props;
     const movieData = movieItems.slice(start, end);
     const tvData = tvItems.slice(start, end);
     return (

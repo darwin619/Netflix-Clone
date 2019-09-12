@@ -1,5 +1,5 @@
-import { createSelector } from 'reselect';
-import {FixString} from '../../Utils/FixString';
+import { createSelector } from "reselect";
+import { FixString } from "../../Utils/FixString";
 
 const selectMovie = state => state.movie;
 
@@ -23,8 +23,19 @@ export const selectMovieVideos = createSelector(
   movie => movie.movieVideos
 );
 
-export const selectMovieByTitle = params => createSelector(
-  [selectMovieItems],
-  movieItems => movieItems.filter(items => FixString(items.title) === params)
+export const selectIsMovieFetching = createSelector(
+  [selectMovie],
+  movie => movie.isFetching
 );
 
+export const selectIsAdditionalMovieFetching = createSelector(
+  [selectMovie],
+  movie => movie.isAdditionalFetching
+);
+
+
+export const selectMovieByTitle = params =>
+  createSelector(
+    [selectMovieItems],
+    movieItems => movieItems.filter(items => FixString(items.title) === params)
+  );
