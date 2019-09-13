@@ -30,7 +30,7 @@
   }
    @media screen and (max-width: 800px) {
     display: block;
-    height: 90vh;
+    height: auto;
   }
 }
 
@@ -52,7 +52,7 @@
   @media screen and (max-width: 800px) {
     font-size: 15px;
     line-height: 21px;
-    bottom: 17%;
+    bottom: 10%;
     right: 10%;
     left: 12%;
   } 

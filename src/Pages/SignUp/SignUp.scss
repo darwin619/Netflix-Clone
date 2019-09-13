@@ -1,9 +1,7 @@
 .signup {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
+ @media screen and (max-width: 800px) { 
+    overflow-x: hidden;
+  }
 }
 
 .signup-title {
@@ -49,10 +47,19 @@
 }
 
 .signup-bg {
+  min-height: 100%;
+  min-width: 1024px;
+  filter: brightness(65%);
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  filter: brightness(60%);
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  @media screen and (max-width: 800px) { 
+    left: 50%;
+    margin-left: -512px; 
+  }
 }
 
 .signup-container {
