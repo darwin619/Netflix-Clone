@@ -3,6 +3,13 @@
   margin-left: 15px;
   font-size: 1.7rem;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 160px;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-left: unset;
+  }
 }
 
 .searchpage-grid {

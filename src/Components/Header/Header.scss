@@ -5,8 +5,10 @@
   justify-content: space-between;
   margin-bottom: 10px;
   position: absolute;
-  z-index: 40;
   top: 0;
+    left: 0;
+    right: 0;
+  z-index: 40;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;

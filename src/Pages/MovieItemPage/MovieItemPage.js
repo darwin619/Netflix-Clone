@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import "./MovieItemPage.scss";
 import { connect } from "react-redux";
 import ItemPageOverviewContainer from "../../Components/ItemPageOverview/ItemPageOverviewContainer";
@@ -8,6 +9,7 @@ import { getMovies } from "../../Redux/Movie/movie-actions";
 class MovieItemPage extends React.Component {
   componentDidMount() {
     this.props.dispatch(getMovies());
+    ReactDOM.findDOMNode(this).scrollIntoView();
   }
 
   render() {

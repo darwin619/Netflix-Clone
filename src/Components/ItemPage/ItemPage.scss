@@ -1,7 +1,5 @@
 .item-page {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+
 
   @media screen and (max-width: 800px) { 
     overflow-x: hidden;
@@ -65,8 +63,8 @@
     filter: contrast(110%);
 
     @media screen and (max-width: 800px) { 
-      width: 250px;
-      height: auto;
+      width: 265px;
+      height: 430px;
       margin: 20px auto;
   }
   }

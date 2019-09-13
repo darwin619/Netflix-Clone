@@ -50,6 +50,7 @@
   }
 }
 
+@media screen and (max-width: 800px) {
 .box:active .text {
   visibility: visible;
   transition: opacity 0.62s, ease 1s;
@@ -65,6 +66,26 @@
 .box:active .movie-image {
   transition: opacity 0.62s, ease 1s;
   opacity: 0.5;
+}
+}
+
+@media screen and (min-width: 800px) {
+.box:hover .text {
+  visibility: visible;
+  transition: opacity 0.62s, ease 1s;
+  opacity: 1;
+}
+
+.box:hover .item-addtolist {
+  visibility: visible;
+  transition: opacity 0.62s, ease 1s;
+  opacity: 1;
+}
+
+.box:hover .movie-image {
+  transition: opacity 0.62s, ease 1s;
+  opacity: 0.5;
+}
 }
 
 .item-addtolist {
