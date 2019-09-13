@@ -21,10 +21,10 @@ class CollectionGrid extends React.Component {
     const { movieGridItems, tvShowGridItems, movies, tvshow } = this.props;
     return (
       <div className="outer-grid">
-        <span>
+        <span className="left">
           <FontAwesomeIcon
             icon={faChevronLeft}
-            className="left"
+            className="left-icon"
             onClick={() => LeftGridArrow(this.gridRef)}
           />
         </span>
@@ -41,10 +41,10 @@ class CollectionGrid extends React.Component {
                 ))
               : null}
           </div>
-          <span>
+          <span className="right">
           <FontAwesomeIcon
             icon={faChevronRight}
-            className="right"
+            className="right-icon"
             onClick={() => RightGridArrow(this.gridRef)}
           />
         </span>

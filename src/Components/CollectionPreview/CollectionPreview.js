@@ -36,25 +36,24 @@ class CollectionPreview extends React.Component {
     const tvData = tvItems.slice(start, end);
     return (
       <div className="collection-preview" id="scroll">
+        <h1 className="title">{title.toUpperCase()}</h1>
         <Fade>
           <div className="collection-box">
-            <span className="fix">
+            <span className="left-controls">
               <FontAwesomeIcon
                 icon={faChevronLeft}
-                className="left-controls"
+                className="left-control-icon"
                 onClick={this.onLeftClick}
               />
             </span>
-            <span className="fix">
+            <span className="right-controls">
               <FontAwesomeIcon
                 icon={faChevronRight}
-                className="right-controls"
+                className="right-control-icon"
                 onClick={this.onRightClick}
               />
             </span>
-            <div className="preview-container" ref={this.divRef}>
-              <h1 className="title">{title.toUpperCase()}</h1>
-              <div className="preview">
+              <div className="preview" ref={this.divRef}>
                 {movies
                   ? movieData.map(item => (
                       <CollectionItem
@@ -75,7 +74,6 @@ class CollectionPreview extends React.Component {
                       />
                     ))
                   : null}
-              </div>
             </div>
           </div>
         </Fade>

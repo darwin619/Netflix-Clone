@@ -6,23 +6,12 @@
   cursor: pointer;
   margin-bottom: 15px;
 
-  @media screen and (min-width: 800px) {
   &:hover {
     .rating,
     .list-addtolist {
       visibility: visible;
     }
   }
-}
-
-  @media screen and (max-width: 700px) {
-  &:active {
-    .rating,
-    .list-addtolist {
-      visibility: visible;
-    }
-  }
-}
 }
 
 .list-image-container {
@@ -117,23 +106,9 @@
 .list-addtolist,
 .list-item {
   &:hover {
-    @media screen and (min-width: 800px) {
       .list-image {
         opacity: 0.5;
       }
   }
 }
-}
 
-
-.rating,
-.list-addtolist,
-.list-item {
-  &:active {
-    @media screen and (max-width: 800px) {
-      .list-image {
-        opacity: 0.5;
-      }
-  }
-}
-}

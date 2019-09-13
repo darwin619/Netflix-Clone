@@ -9,21 +9,11 @@
   &:hover {
     .rating,
     .search-addtolist {
-      @media screen and (min-width: 800px) {
         visibility: visible;
     }
   }
 }
 
-  &:active {
-    .rating,
-    .search-addtolist {
-       @media screen and (max-width: 800px) {
-         visibility: visible;
-    }
-  }
-}
-}
 
 .search-image-container {
   display: flex;
@@ -120,23 +110,8 @@
 .addtolist,
 .search-item {
   &:hover {
-    @media screen and (min-width: 800px) {
       .search-image {
         opacity: 0.5;
       }
   }
-}
-}
-
-
-.rating,
-.addtolist,
-.search-item {
-  &:active {
-    @media screen and (max-width: 800px) {
-      .search-image {
-        opacity: 0.5;
-    }
-  }
-}
 }
