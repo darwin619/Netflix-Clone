@@ -3,7 +3,7 @@
   text-align: center;
   height: 30px;
   border-top: 2px solid #141414;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 10px;
   width: 95%;
   margin: 0 auto;
@@ -14,11 +14,11 @@
 
   /* Workaround for iPhone 6/7/8 & Galaxy S5*/
   @media screen and (max-height: 700px) and (max-width: 400px) {
-    padding-top: 40px;
+    padding-top: 10px;
   }
   /* Workaround for iPhone 5/SE*/
   @media screen and (max-height: 600px) and (max-width: 400px) {
-    padding-top: 110px;
+    padding-top: 40px;
   }
 }
 
@@ -80,6 +80,42 @@
   justify-content: space-between;
 }
 
+.name-link {
+  text-decoration: underline;
+}
+
+.two {
+  align-items: center;
+}
+
+.center-text, .footer-end, .footer-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tmdb {
+  width: 90px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.one {
+  margin-bottom: 5px;
+}
+
+.github-logo {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.three {
+  color: grey;
+  text-decoration: underline;
+}
+
 .made {
   color: white;
   display: inline;
@@ -87,8 +123,13 @@
   font-family: "Calibri";
   display: block;
   font-weight: lighter;
+  cursor: pointer;
   font-style: italic;
   animation: text-flicker 6s linear infinite;
+
+  @media screen and (max-width: 800px) {
+    font-size: 15px;
+  }
 }
 
 @keyframes text-flicker {
