@@ -40,9 +40,7 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
         </Link>
 
         {currentUser ? (
-          <div>
-            <div className="navmenu-option" onClick={() => auth.signOut()}>Sign Out</div>
-          </div>
+            <div className="navmenu-option signout" onClick={() => auth.signOut()}>Sign Out</div>
         ) : (
           <div>
             <Link className="navmenu-option" to="/signin">Sign In</Link>

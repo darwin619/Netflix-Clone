@@ -6,20 +6,20 @@
   cursor: pointer;
   margin-bottom: 15px;
 
-  @media screen and (min-width: 800px) {
   &:hover {
     .rating,
     .search-addtolist {
-      visibility: visible;
+      @media screen and (min-width: 800px) {
+        visibility: visible;
     }
   }
 }
 
-  @media screen and (max-width: 800px) {
   &:active {
     .rating,
     .search-addtolist {
-      visibility: visible;
+       @media screen and (max-width: 800px) {
+         visibility: visible;
     }
   }
 }
@@ -115,25 +115,27 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+
 .rating,
 .addtolist,
 .search-item {
   &:hover {
-    .search-image {
-      opacity: 0.5;
-    }
+    @media screen and (min-width: 800px) {
+      .search-image {
+        opacity: 0.5;
+      }
   }
 }
 }
 
-@media screen and (max-width: 800px) {
+
 .rating,
 .addtolist,
 .search-item {
   &:active {
-    .search-image {
-      opacity: 0.5;
+    @media screen and (max-width: 800px) {
+      .search-image {
+        opacity: 0.5;
     }
   }
 }

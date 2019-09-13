@@ -15,7 +15,7 @@
   }
 }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 700px) {
   &:active {
     .rating,
     .list-addtolist {
@@ -112,26 +112,28 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+
 .rating,
 .list-addtolist,
 .list-item {
   &:hover {
-    .list-image {
-      opacity: 0.5;
-    }
+    @media screen and (min-width: 800px) {
+      .list-image {
+        opacity: 0.5;
+      }
   }
 }
 }
 
-@media screen and (max-width: 800px) {
+
 .rating,
 .list-addtolist,
 .list-item {
   &:active {
-    .list-image {
-      opacity: 0.5;
-    }
+    @media screen and (max-width: 800px) {
+      .list-image {
+        opacity: 0.5;
+      }
   }
 }
 }

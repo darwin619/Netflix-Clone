@@ -1,27 +1,21 @@
 .item-page {
-
-
   @media screen and (max-width: 800px) { 
     overflow-x: hidden;
   }
 
   .background-image {
-    /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
-  
-  /* Set up proportionate scaling */
+  filter: blur(1.3px) brightness(60%);
   width: 100%;
   height: auto;
-  
-  /* Set up positioning */
   position: fixed;
   top: 0;
   left: 0;
 
-  @media screen and (max-width: 800px) { /* Specific to this particular image */
+  @media screen and (max-width: 800px) { 
     left: 50%;
-    margin-left: -512px;   /* 50% */
+    margin-left: -512px; 
   }
 }
 
@@ -65,7 +59,7 @@
     @media screen and (max-width: 800px) { 
       width: 265px;
       height: 430px;
-      margin: 20px auto;
+      margin: 10px auto;
   }
   }
 
@@ -96,6 +90,7 @@
       width: 90%;
       text-align: center;
       padding-bottom: 15px;
+      font-weight: bolder;
   }
   }
 
@@ -122,7 +117,7 @@
     border-radius: 5px;
 
      @media screen and (max-width: 800px) { 
-       padding-top: 15px;
+       margin-top: 15px;
   }
   }
 
