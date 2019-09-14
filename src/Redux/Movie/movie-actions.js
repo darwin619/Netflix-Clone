@@ -14,11 +14,12 @@ export function getMovies() {
     fetchData().then(data => {
       const movieData = data.map(({ results }) => results);
       var newArray = Array.prototype.concat.apply([], movieData);
-      console.log(data)
-      console.log(newArray)
-      dispatch({ 
-        type: MovieActionTypes.SET_MOVIE_DATA, 
-        payload: newArray });
+      console.log(data);
+      console.log(newArray);
+      dispatch({
+        type: MovieActionTypes.SET_MOVIE_DATA,
+        payload: newArray
+      });
     });
     fetchGrid().then(data => {
       const movieGridData = data.map(({ results }) => results[0]);

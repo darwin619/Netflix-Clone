@@ -9,23 +9,27 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ToggleMenuHidden } from '../../Redux/User/user-actions';
+import { ToggleMenuHidden } from "../../Redux/User/user-actions";
 import Netflix from "../../Assets/netflix.jpg";
 
 const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
   return (
-    <div className="overlay">   
-       <div className="exit" onClick={ToggleMenuHidden}>
-          <FontAwesomeIcon icon={faTimes} className="exit-menu-icon" />
-       </div>
+    <div className="overlay">
+      <div className="exit" onClick={ToggleMenuHidden}>
+        <FontAwesomeIcon icon={faTimes} className="exit-menu-icon" />
+      </div>
       <div className="overlay-content" onClick={ToggleMenuHidden}>
-        
         <img src={Netflix} alt="netflix_profile" className="netflix_profile" />
 
-        {currentUser 
-         ? <Link className="navmenu-username" to="">Hi, {currentUser.displayName}</Link>
-         : <Link className="navmenu-username" to="">Hi, Guest</Link>
-        }
+        {currentUser ? (
+          <Link className="navmenu-username" to="">
+            Hi, {currentUser.displayName}
+          </Link>
+        ) : (
+          <Link className="navmenu-username" to="">
+            Hi, Guest
+          </Link>
+        )}
 
         <Link className="navmenu-option" to="/movies">
           Movies
@@ -40,14 +44,21 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
         </Link>
 
         {currentUser ? (
-            <div className="navmenu-option signout" onClick={() => auth.signOut()}>Sign Out</div>
+          <div
+            className="navmenu-option signout"
+            onClick={() => auth.signOut()}
+          >
+            Sign Out
+          </div>
         ) : (
           <div>
-            <Link className="navmenu-option" to="/signin">Sign In</Link>
+            <Link className="navmenu-option" to="/signin">
+              Sign In
+            </Link>
           </div>
         )}
-        </div>
       </div>
+    </div>
   );
 };
 
@@ -61,5 +72,8 @@ const mapDispatchToProps = dispatch => ({
 
 export default compose(
   withRouter,
-  connect(mapStateToProps, mapDispatchToProps)
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )
 )(NavMenu);

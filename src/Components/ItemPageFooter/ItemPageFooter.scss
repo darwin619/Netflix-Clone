@@ -4,15 +4,15 @@
   width: 120px;
 
   &:not(:last-child) {
-  margin-right: 30px;
+    margin-right: 30px;
   }
 
-  @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     width: 70px;
     margin-top: 10px;
     &:not(:last-child) {
       margin-right: 15px;
-  }
+    }
   }
 }
 
@@ -21,7 +21,7 @@
   flex-direction: row;
   margin-top: 12px;
 
-  @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     justify-content: center;
   }
 }
@@ -31,7 +31,7 @@
   justify-content: center;
   width: 120px;
 
-   @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     width: 70px;
   }
 }
@@ -42,7 +42,7 @@
     0 0px 8px rgba(166, 173, 201, 0.2);
   padding: 3px;
 
-   @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     width: 65px;
     height: 100px;
   }
@@ -55,7 +55,7 @@
 .buttons {
   margin-top: 25px;
 
-   @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     display: flex;
     justify-content: space-around;
   }

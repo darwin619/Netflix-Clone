@@ -1,5 +1,5 @@
 .signin {
-  @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     overflow-x: hidden;
   }
 }
@@ -50,9 +50,9 @@
   top: 0;
   left: 0;
 
-  @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     left: 50%;
-    margin-left: -512px; 
+    margin-left: -512px;
   }
 }
 
@@ -64,7 +64,6 @@
   @media screen and (max-width: 800px) {
     width: 100%;
   }
-
 }
 
 .signin-shadow {

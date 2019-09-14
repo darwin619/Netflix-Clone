@@ -11,16 +11,16 @@ export function getTvShows() {
     fetchData().then(data => {
       const TVData = data.map(({ results }) => results);
       var newArray = Array.prototype.concat.apply([], TVData);
-      dispatch({ 
-        type: TVActionTypes.SET_TV_DATA, 
-        payload: newArray 
+      dispatch({
+        type: TVActionTypes.SET_TV_DATA,
+        payload: newArray
       });
     });
     fetchTvShowsGrid().then(data => {
       const TVGridData = data.map(({ results }) => results[0]);
       var newArray = Array.prototype.concat.apply([], TVGridData);
-      dispatch({ 
-        type: TVActionTypes.SET_TV_GRID_DATA, 
+      dispatch({
+        type: TVActionTypes.SET_TV_GRID_DATA,
         payload: newArray
       });
       dispatch(getTvShowsSuccess());

@@ -1,23 +1,23 @@
 .item-page {
-  @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     overflow-x: hidden;
   }
 
   .background-image {
-  min-height: 100%;
-  min-width: 1024px;
-  filter: blur(1.3px) brightness(60%);
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
+    min-height: 100%;
+    min-width: 1024px;
+    filter: blur(1.3px) brightness(60%);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-  @media screen and (max-width: 800px) { 
-    left: 50%;
-    margin-left: -512px; 
+    @media screen and (max-width: 800px) {
+      left: 50%;
+      margin-left: -512px;
+    }
   }
-}
 
   .item {
     width: 100%;
@@ -33,22 +33,22 @@
     position: absolute;
     top: 0;
 
-    @media screen and (max-width: 800px) { 
-    margin-top: 150px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: 1000px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  }
+    @media screen and (max-width: 800px) {
+      margin-top: 150px;
+      margin-bottom: 20px;
+      width: 100%;
+      height: 1000px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    }
   }
 
-.image-container {
-  @media screen and (max-width: 800px) { 
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .image-container {
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
-}
 
   .poster {
     width: 365px;
@@ -56,11 +56,11 @@
     filter: brightness(105%);
     filter: contrast(110%);
 
-    @media screen and (max-width: 800px) { 
+    @media screen and (max-width: 800px) {
       width: 265px;
       height: 430px;
       margin: 10px auto;
-  }
+    }
   }
 
   .container {
@@ -68,9 +68,9 @@
     flex-direction: row;
     justify-content: space-between;
 
-    @media screen and (max-width: 800px) { 
+    @media screen and (max-width: 800px) {
       flex-direction: column;
-  }
+    }
   }
 
   .text-box {
@@ -84,14 +84,14 @@
     font-family: sans-serif;
     text-shadow: 3px 3px 4px black;
 
-    @media screen and (max-width: 800px) { 
+    @media screen and (max-width: 800px) {
       margin: unset;
       margin: 0 auto;
       width: 90%;
       text-align: center;
       padding-bottom: 15px;
       font-weight: bolder;
-  }
+    }
   }
 
   .item-name {
@@ -116,9 +116,9 @@
     margin-top: 15px;
     border-radius: 5px;
 
-     @media screen and (max-width: 800px) { 
-       margin-top: 15px;
-  }
+    @media screen and (max-width: 800px) {
+      margin-top: 15px;
+    }
   }
 
   .rank {
@@ -145,8 +145,8 @@
     font-size: 1.2rem;
     text-decoration: underline;
 
-     @media screen and (max-width: 800px) { 
-       padding-top: 10px;
-  }
+    @media screen and (max-width: 800px) {
+      padding-top: 10px;
+    }
   }
 }

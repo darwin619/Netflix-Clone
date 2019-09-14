@@ -12,16 +12,17 @@
   transition: 0.5s;
   animation: moveToBottom 0.7s ease-out;
 
-     @keyframes moveToBottom {
-      0% {
-        opacity: 0;
-        transform: translateX(-20rem); }
-      100% {
-        opacity: 1;
-        transform: translateX(0); } }
+  @keyframes moveToBottom {
+    0% {
+      opacity: 0;
+      transform: translateX(-20rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
-
-
 
 .overlay-content {
   position: absolute;
@@ -67,5 +68,3 @@
   width: 50px;
   margin: 15px auto;
 }
-
-

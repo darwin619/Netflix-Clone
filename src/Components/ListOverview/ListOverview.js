@@ -14,16 +14,13 @@ const ListOverview = ({ listItems, currentUser }) => {
           : "Sign in to view your list"}
       </h1>
       <div className="list-items-grid">
-      {
-        currentUser
-        ? <div className="list-items-container">
-          {listItems.map(item => (
-            <ListItem key={item.id} item={item} />
-          ))}
-        </div>
-        : null
-      }
-        
+        {currentUser ? (
+          <div className="list-items-container">
+            {listItems.map(item => (
+              <ListItem key={item.id} item={item} />
+            ))}
+          </div>
+        ) : null}
       </div>
     </div>
   );

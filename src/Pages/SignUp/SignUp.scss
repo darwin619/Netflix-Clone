@@ -1,5 +1,5 @@
 .signup {
- @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     overflow-x: hidden;
   }
 }
@@ -8,12 +8,11 @@
   margin-left: 60px;
   margin-top: 34px;
   margin-bottom: 15px;
-  
+
   @media screen and (max-width: 800px) {
     margin-top: 12px;
     margin-bottom: 5px;
   }
-
 }
 
 .signup-option {
@@ -56,9 +55,9 @@
   top: 0;
   left: 0;
 
-  @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 800px) {
     left: 50%;
-    margin-left: -512px; 
+    margin-left: -512px;
   }
 }
 
@@ -80,7 +79,7 @@
   position: absolute;
   top: 0;
 
-   @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     margin-top: 150px;
     width: 330px;
     margin-left: auto;

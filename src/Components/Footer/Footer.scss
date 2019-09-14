@@ -88,7 +88,9 @@
   align-items: center;
 }
 
-.center-text, .footer-end, .footer-start {
+.center-text,
+.footer-end,
+.footer-start {
   display: flex;
   flex-direction: column;
   align-items: center;

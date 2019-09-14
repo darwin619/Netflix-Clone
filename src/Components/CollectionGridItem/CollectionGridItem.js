@@ -4,7 +4,7 @@ import "./CollectionGridItem.scss";
 import AddToList from "../AddToList/AddToList";
 
 const CollectionGridItem = ({ item, listItems, addItem }) => {
-  const { title, overview, backdrop_path, poster_path,name } = item;
+  const { title, overview, backdrop_path, poster_path, name } = item;
   return (
     <div className="grid-item">
       <img
@@ -12,7 +12,7 @@ const CollectionGridItem = ({ item, listItems, addItem }) => {
         alt="movie"
         className="grid-image"
       />
-       <img
+      <img
         src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${poster_path}`}
         alt="movie"
         className="grid-image grid-mobile"

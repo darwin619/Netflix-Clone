@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 .collection-grid {
@@ -17,16 +17,18 @@
   flex-direction: row;
 }
 
-.left-icon, .right-icon {
+.left-icon,
+.right-icon {
   cursor: pointer;
-   &:hover {
+  &:hover {
     font-size: 3.5rem;
     color: white;
     transition: all 0.2s ease;
   }
 }
 
-.left, .right {
+.left,
+.right {
   display: flex;
   align-items: center;
   font-size: 3rem;

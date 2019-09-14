@@ -14,7 +14,7 @@
 
     @media screen and (max-width: 800px) {
       font-size: 1rem;
-  }
+    }
   }
 
   .collection-box {
@@ -23,7 +23,8 @@
     flex-direction: row;
     position: relative;
 
-    .left-controls, .right-controls {
+    .left-controls,
+    .right-controls {
       height: 168.4px;
       display: flex;
       align-items: center;
@@ -34,7 +35,7 @@
 
       @media screen and (max-width: 800px) {
         height: 129.44px;
-  }
+      }
     }
 
     .left-controls {
@@ -44,19 +45,20 @@
     .right-controls {
       position: absolute;
       right: 0%;
-  }
+    }
 
-   .left-control-icon, .right-control-icon {
+    .left-control-icon,
+    .right-control-icon {
       cursor: pointer;
 
-       &:hover {
+      &:hover {
         font-size: 3rem;
         color: white;
         transition: all 0.2s ease;
       }
     }
 
-   /* .preview-container {
+    /* .preview-container {
       height: 270px;
       display: flex;
       flex-direction: column;

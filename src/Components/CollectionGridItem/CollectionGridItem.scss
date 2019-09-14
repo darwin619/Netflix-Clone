@@ -10,9 +10,9 @@
 }
 
 .grid-name {
-   @media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     font-size: 16px;
-  } 
+  }
 }
 
 .grid-image {
@@ -25,10 +25,10 @@
 }
 
 .grid-mobile {
-   @media screen and (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     display: none;
   }
-   @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     display: block;
     height: auto;
   }
@@ -55,7 +55,7 @@
     bottom: 10%;
     right: 10%;
     left: 12%;
-  } 
+  }
 }
 
 .grid-tv-text {
@@ -69,11 +69,11 @@
   text-shadow: 3px 3px 4px black;
   line-height: 25px;
 
-   @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     font-size: 15px;
     line-height: 22px;
     bottom: 32%;
     right: 10%;
     left: 12%;
-  } 
+  }
 }

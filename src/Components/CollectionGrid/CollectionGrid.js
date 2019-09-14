@@ -42,14 +42,13 @@ class CollectionGrid extends React.Component {
               : null}
           </div>
           <span className="right">
-          <FontAwesomeIcon
-            icon={faChevronRight}
-            className="right-icon"
-            onClick={() => RightGridArrow(this.gridRef)}
-          />
-        </span>
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className="right-icon"
+              onClick={() => RightGridArrow(this.gridRef)}
+            />
+          </span>
         </div>
-
       </div>
     );
   }

@@ -6,8 +6,8 @@
   margin-bottom: 10px;
   position: absolute;
   top: 0;
-    left: 0;
-    right: 0;
+  left: 0;
+  right: 0;
   z-index: 40;
 
   @media screen and (max-width: 800px) {
@@ -16,9 +16,9 @@
   }
 
   .logo-container {
-  @media screen and (max-width: 800px) {
-     margin: 0 auto;
-  } 
+    @media screen and (max-width: 800px) {
+      margin: 0 auto;
+    }
   }
 
   .logo {
@@ -30,13 +30,14 @@
 
     @media screen and (max-width: 800px) {
       margin: unset;
-    } 
+    }
   }
 
-  .options-primary, .options-secondary {
+  .options-primary,
+  .options-secondary {
     @media screen and (max-width: 800px) {
       display: none;
-    } 
+    }
   }
 
   .options {
@@ -53,7 +54,7 @@
       margin-bottom: 25px;
       height: 200px;
       justify-content: center;
-    } 
+    }
 
     .option {
       padding: 10px 12px;
@@ -70,7 +71,7 @@
       @media screen and (max-width: 800px) {
         padding: 5px 6px;
         font-size: 13px;
-    } 
+      }
 
       &:hover {
         color: #a9a9a9;
@@ -81,14 +82,14 @@
 
   .last {
     margin-left: auto;
-    margin-right: 15px;  
+    margin-right: 15px;
 
-     @media screen and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       margin: unset;
       position: absolute;
       top: 65%;
       margin: 0 auto;
-    } 
+    }
   }
 
   .shift {
@@ -106,25 +107,24 @@
     }
   }
 
-.nav-menu-icon {
+  .nav-menu-icon {
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+    @media screen and (max-width: 800px) {
+      display: inline-block;
+      font-size: 25px;
+      color: white;
+      position: absolute;
+      top: 5%;
+      left: 2%;
+      padding: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
 
-  @media screen and (min-width: 800px) {
-    display: none;
-  }
-  @media screen and (max-width: 800px) {
-    display: inline-block;
-    font-size: 25px;
-    color: white;
-    position: absolute;
-    top: 5%;
-    left: 2%;
-    padding: 10px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-
-    &:active {
-      transform: scale(1.1);
+      &:active {
+        transform: scale(1.1);
+      }
     }
   }
-}
 }

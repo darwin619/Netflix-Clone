@@ -5,15 +5,24 @@ import "./Header.scss";
 import { withRouter } from "react-router";
 import SearchBar from "../SearchBar/SearchBar";
 import { auth } from "../../Firebase/firebase.utils";
-import { selectCurrentUser, selectToggleHidden } from "../../Redux/User/user-selectors";
-import { ToggleMenuHidden } from '../../Redux/User/user-actions';
+import {
+  selectCurrentUser,
+  selectToggleHidden
+} from "../../Redux/User/user-selectors";
+import { ToggleMenuHidden } from "../../Redux/User/user-actions";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NavMenu from './NavMenu';
+import NavMenu from "./NavMenu";
 
-const Header = ({ history, currentUser, currentRoute, hidden, ToggleMenuHidden}) => {
+const Header = ({
+  history,
+  currentUser,
+  currentRoute,
+  hidden,
+  ToggleMenuHidden
+}) => {
   return (
     <div className="header">
       <div className="logo-container" onClick={() => history.push("/movies")}>
@@ -21,19 +30,19 @@ const Header = ({ history, currentUser, currentRoute, hidden, ToggleMenuHidden})
       </div>
 
       <div className="options">
-       <div className="options-primary">
-        <Link className="option" to="/movies">
-          Movies
-        </Link>
+        <div className="options-primary">
+          <Link className="option" to="/movies">
+            Movies
+          </Link>
 
-        <Link className="option" to="/tvshows">
-          TV Shows
-        </Link>
+          <Link className="option" to="/tvshows">
+            TV Shows
+          </Link>
 
-        <Link className="option" to="/mylist">
-          My List
-        </Link>
-      </div>
+          <Link className="option" to="/mylist">
+            My List
+          </Link>
+        </div>
 
         <div className="last">
           <SearchBar currentRoute={currentRoute} />
@@ -59,7 +68,11 @@ const Header = ({ history, currentUser, currentRoute, hidden, ToggleMenuHidden})
           </div>
         )}
       </div>
-      <FontAwesomeIcon icon={faBars} className="nav-menu-icon" onClick={ToggleMenuHidden} />
+      <FontAwesomeIcon
+        icon={faBars}
+        className="nav-menu-icon"
+        onClick={ToggleMenuHidden}
+      />
       {hidden ? null : <NavMenu />}
     </div>
   );
@@ -76,5 +89,8 @@ const mapDispatchToProps = dispatch => ({
 
 export default compose(
   withRouter,
-  connect(mapStateToProps, mapDispatchToProps)
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )
 )(Header);

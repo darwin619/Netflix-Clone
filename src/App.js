@@ -18,7 +18,6 @@ import { compose } from "redux";
 import { withRouter } from "react-router";
 import ListOverview from "./Components/ListOverview/ListOverview";
 
-
 class App extends React.Component {
   unsubscribeFromAuth = null;
 

@@ -6,7 +6,14 @@ import { withRouter } from "react-router";
 import { FixString } from "../../Utils/FixString";
 import AddToList from "../AddToList/AddToList";
 
-const CollectionItem = ({item,movies,tvshow,history,addItem,listItems}) => {
+const CollectionItem = ({
+  item,
+  movies,
+  tvshow,
+  history,
+  addItem,
+  listItems
+}) => {
   const { title, overview, backdrop_path, name } = item;
   const para = Truncate(overview, 155, " ..read more");
   var titlePath = movies ? FixString(title) : null;
