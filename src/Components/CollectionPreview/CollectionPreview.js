@@ -53,14 +53,14 @@ class CollectionPreview extends React.Component {
             <span className="collection-preview__left-arrow">
               <FontAwesomeIcon
                 icon={faChevronLeft}
-                className="left-arrow__icon"
+                className="collection-preview__left-arrow-icon"
                 onClick={this.onLeftClick}
               />
             </span>
             <span className="collection-preview__right-arrow">
               <FontAwesomeIcon
                 icon={faChevronRight}
-                className="right-arrow__icon"
+                className="collection-preview__right-arrow-icon"
                 onClick={this.onRightClick}
               />
             </span>

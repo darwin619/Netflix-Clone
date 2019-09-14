@@ -38,16 +38,6 @@
     @media screen and (max-width: 800px) {
       height: 129.44px;
     }
-
-    &__icon {
-      cursor: pointer;
-
-      &:hover {
-        font-size: 3rem;
-        color: white;
-        transition: all 0.2s ease;
-      }
-    }
   }
 
   &__left-arrow {
@@ -57,6 +47,16 @@
   &__right-arrow {
     position: absolute;
     right: 0%;
+  }
+
+  &__left-arrow-icon, &__right-arrow-icon {
+    cursor: pointer;
+
+    &:hover {
+      font-size: 3rem;
+      color: white;
+      transition: all 0.2s ease;
+    }
   }
 
   &__inner {

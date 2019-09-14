@@ -1,6 +1,6 @@
 export const TitleHide = node => {
   let title = node.querySelector("h1");
-  let preview = node.querySelector(".box");
+  let preview = node.querySelector(".collection-item");
 
   if (preview) {
     preview.addEventListener("mouseover", function() {
