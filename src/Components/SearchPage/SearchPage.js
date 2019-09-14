@@ -9,9 +9,9 @@ import SearchItem from "../SearchItem/SearchItem";
 const SearchPage = ({ searchItems }) => {
   return (
     <div className="search-page">
-      <h1 className="search-title">Search Results</h1>
-      <div className="searchpage-grid">
-        <div className="searchpage-container">
+      <h1 className="search-page__title">Search Results</h1>
+      <div className="search-page__outer">
+        <div className="search-page__inner">
           {searchItems.map(item =>
             item.poster_path ? <SearchItem key={item.id} item={item} /> : null
           )}

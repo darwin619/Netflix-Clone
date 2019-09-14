@@ -7,21 +7,31 @@
   margin-bottom: 15px;
 
   &:hover {
-    .rating,
-    .search-addtolist {
-        visibility: visible;
+    .search-item__rating,
+    .search-item__addtolist {
+      visibility: visible;
+    }
+    .search-item__img {
+      opacity: 0.5;
     }
   }
-}
 
+  .search-item__rating,
+  .addtolist {
+    &:hover {
+      .search-item__img {
+          opacity: 0.5;
+        }
+    }
+  }
 
-.search-image-container {
+&__img-box {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.search-image {
+&__img {
   width: 240px;
   height: 360px;
   cursor: pointer;
@@ -33,18 +43,18 @@
   }
 }
 
-.search-movie-name {
+&__title {
   font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
-.rating-container {
+&__rating-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.rating {
+&__rating {
   padding: 5px;
   background-color: black;
   display: inline-flex;
@@ -55,9 +65,10 @@
   top: 0%;
   visibility: hidden;
   z-index: 40;
+  transition: all 0.1s;
 }
 
-.rank {
+&__rank {
   font-size: 1.1rem;
   font-weight: lighter;
   margin-left: 7px;
@@ -65,21 +76,21 @@
   color: white;
 }
 
-.ten {
+&__ten {
   font-size: 14px;
   margin-top: 4px;
   color: white;
 }
 
-.imdb {
+&__imdb {
   width: 50px;
 }
 
-.star {
+&__star {
   width: 30px;
 }
 
-.search-addtolist {
+&__addtolist {
   position: absolute;
   color: white;
   bottom: 18%;
@@ -92,26 +103,4 @@
   width: 100%;
   align-items: center;
 }
-
-.fass {
-  padding: 5px;
-  border-radius: 50%;
-  border: 1px solid white;
-  display: inline;
-  margin-right: 5px;
-  &:hover {
-    transition: all 0.2s ease-in;
-    transform: scale(1.1);
-  }
-}
-
-
-.rating,
-.addtolist,
-.search-item {
-  &:hover {
-      .search-image {
-        opacity: 0.5;
-      }
-  }
 }

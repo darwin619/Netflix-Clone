@@ -42,26 +42,26 @@ class ItemPage extends React.Component {
         <img
           src={`${background}`}
           alt="background"
-          className="background-image"
+          className="item-page__bg"
         />
         <div className="item">
           <Fade>
-            <div className="item-container">
-              <div className="container">
-                <div className="image-container">
-                  <img src={`${poster}`} alt="poster" className="poster" />
+            <div className="item__outer">
+              <div className="item__inner">
+                <div className="item__img-box">
+                  <img src={`${poster}`} alt="poster" className="item__poster-img" />
                 </div>
-                <div className="text-box">
-                  <h1 className="item-name">{title}</h1>
-                  <h1 className="item-name">{name}</h1>
-                  <span className="paragraph">{overview}</span>
+                <div className="item__text-box">
+                  <h1 className="item__title">{title}</h1>
+                  <h1 className="item__title">{name}</h1>
+                  <span className="item__overview">{overview}</span>
                   <div className="item-rating">
-                    <img src={imdb} alt="imdb" className="imdb" />
-                    <span className="rank">{vote_average}/</span>
-                    <span className="ten">10</span>
-                    <img src={star} alt="imdb" className="star" />
+                    <img src={imdb} alt="imdb" className="item-rating__imdb" />
+                    <span className="item-rating__rank">{vote_average}/</span>
+                    <span className="item-rating__ten">10</span>
+                    <img src={star} alt="imdb" className="item-rating__star" />
                   </div>
-                  <h1 className="cast-title">Cast</h1>
+                  <h1 className="item__cast-title">Cast</h1>
                   <ItemPageFooter movies={movies} tvshow={tvshow} item={item} />
                 </div>
               </div>

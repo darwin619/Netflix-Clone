@@ -3,77 +3,77 @@
   position: relative;
 
   &:last-child {
-    .grid-movie-text {
-      bottom: 20%;
+    .grid-item__movie-text {
+      bottom: 40%;
     }
   }
-}
 
-.grid-name {
-  @media screen and (max-width: 600px) {
-    font-size: 16px;
-  }
-}
-
-.grid-image {
-  width: 100vw;
-  height: auto;
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-}
-
-.grid-mobile {
-  @media screen and (min-width: 800px) {
-    display: none;
-  }
-  @media screen and (max-width: 800px) {
-    display: block;
+  &__img {
+    width: 100vw;
     height: auto;
+  
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
-}
 
-.grid-overview {
-  color: white;
-}
-
-.grid-movie-text {
-  position: absolute;
-  bottom: 32%;
-  left: 5%;
-  cursor: pointer;
-  right: 5%;
-  color: #fff;
-  font-size: 18px;
-  text-shadow: 3px 3px 4px black;
-  line-height: 25px;
-
-  @media screen and (max-width: 800px) {
-    font-size: 15px;
-    line-height: 21px;
-    bottom: 10%;
-    right: 10%;
-    left: 12%;
+  &__mobile-img {
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+    @media screen and (max-width: 800px) {
+      display: block;
+      height: auto;
+    }
   }
-}
 
-.grid-tv-text {
-  position: absolute;
-  bottom: 41%;
-  left: 5%;
-  cursor: pointer;
-  right: 5%;
-  color: #fff;
-  font-size: 18px;
-  text-shadow: 3px 3px 4px black;
-  line-height: 25px;
-
-  @media screen and (max-width: 800px) {
-    font-size: 15px;
-    line-height: 22px;
+  &__movie-text {
+    position: absolute;
     bottom: 32%;
-    right: 10%;
-    left: 12%;
+    left: 5%;
+    cursor: pointer;
+    right: 5%;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 3px 3px 4px black;
+    line-height: 25px;
+  
+    @media screen and (max-width: 800px) {
+      font-size: 15px;
+      line-height: 21px;
+      bottom: 10%;
+      right: 10%;
+      left: 12%;
+    }
   }
+  
+  &__tv-text {
+    position: absolute;
+    bottom: 41%;
+    left: 5%;
+    cursor: pointer;
+    right: 5%;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 3px 3px 4px black;
+    line-height: 25px;
+  
+    @media screen and (max-width: 800px) {
+      font-size: 15px;
+      line-height: 22px;
+      bottom: 32%;
+      right: 10%;
+      left: 12%;
+    }
+  }
+
+    &__title {
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+
+    &__overview {
+      color: white;
+    }
 }

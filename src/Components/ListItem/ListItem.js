@@ -17,20 +17,20 @@ const ListItem = ({ item, history, removeItem }) => {
   var namePath = name ? FixString(name) : null;
   return (
     <div className="list-item">
-      <div className="rating-container">
-        <span className="rating">
-          <img src={imdb} alt="imdb" className="imdb" />
-          <span className="rank">{vote_average}/</span>
-          <span className="ten">10</span>
-          <img src={star} alt="imdb" className="star" />
+      <div className="list-item__rating-container">
+        <span className="list-item__rating">
+          <img src={imdb} alt="imdb" className="list-item__imdb" />
+          <span className="list-item__rank">{vote_average}/</span>
+          <span className="list-item__ten">10</span>
+          <img src={star} alt="imdb" className="list-item__star" />
         </span>
       </div>
-      <div className="list-addtolist" onClick={() => removeItem(item)}>
-        <FontAwesomeIcon icon={faTimes} className="remove-icon" />
+      <div className="list-item__addtolist" onClick={() => removeItem(item)}>
+        <FontAwesomeIcon icon={faTimes} className="list-item__remove-icon" />
       </div>
 
       <div
-        className="list-image-container"
+        className="list-item__img-box"
         onClick={() => {
           return title
             ? history.push({ pathname: `/movies/${titlePath}`, state: { id } })
@@ -40,13 +40,13 @@ const ListItem = ({ item, history, removeItem }) => {
         <img
           src={`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`}
           alt="movie"
-          className="list-image"
+          className="list-item__img"
         />
       </div>
 
-      <div className="list-text">
-        <h1 className="list-movie-name">{title}</h1>
-        <h1 className="list-movie-name">{name}</h1>
+      <div className="list-item__text">
+        <h1 className="list-item__title">{title}</h1>
+        <h1 className="list-item__title">{name}</h1>
       </div>
     </div>
   );

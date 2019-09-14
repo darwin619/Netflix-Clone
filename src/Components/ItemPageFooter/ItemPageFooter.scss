@@ -1,91 +1,50 @@
-.cast {
-  display: flex;
-  flex-direction: column;
-  width: 120px;
+.item-page-footer {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  @media screen and (max-width: 800px) {
-    width: 70px;
-    margin-top: 10px;
-    &:not(:last-child) {
-      margin-right: 15px;
+    @media screen and (max-width: 800px) {
+      justify-content: center;
     }
   }
-}
 
-.item-page-container {
-  display: flex;
-  flex-direction: row;
-  margin-top: 12px;
+  &__btn-container {
+    margin-top: 25px;
 
-  @media screen and (max-width: 800px) {
-    justify-content: center;
+    @media screen and (max-width: 800px) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
-}
 
-.image-contain {
-  display: flex;
-  justify-content: center;
-  width: 120px;
+  &__btn {
+    border: none;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    padding: 9px 11px;
+    background-color: rgba(51, 51, 51, 0.4);
+    border: none;
+    font-weight: 400;
+    margin-right: 30px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s;
+    color: white;
+    width: 150px;
+    cursor: pointer;
 
-  @media screen and (max-width: 800px) {
-    width: 70px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: unset;
+      background-color: rgba(51, 51, 51, 0.7);
+    }
   }
-}
 
-.profile {
-  width: 80px;
-  box-shadow: 0 0px 20px rgba(154, 160, 185, 0.05),
-    0 0px 8px rgba(166, 173, 201, 0.2);
-  padding: 3px;
-
-  @media screen and (max-width: 800px) {
-    width: 65px;
-    height: 100px;
+  &__icon {
+    margin-right: 4px;
   }
-}
-
-.profile-name {
-  text-align: center;
-}
-
-.buttons {
-  margin-top: 25px;
-
-  @media screen and (max-width: 800px) {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
-.btn {
-  border: none;
-  border-radius: 2px;
-  font-size: 0.9rem;
-  padding: 9px 11px;
-  background-color: rgba(51, 51, 51, 0.4);
-  border: none;
-  font-weight: 400;
-  margin-right: 30px;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all 0.3s;
-  color: white;
-  width: 150px;
-  cursor: pointer;
-  @media screen and (max-width: 600px) {
-    margin: unset;
-    background-color: rgba(51, 51, 51, 0.7);
-  }
-}
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.icon {
-  margin-right: 4px;
 }

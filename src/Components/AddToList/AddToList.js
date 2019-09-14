@@ -11,14 +11,14 @@ const AddToList = ({ addItem, removeItem, item, listItems }) => {
   return (
     <div className="addtolist">
       {existingItem.length ? (
-        <div className="addtolist-container" onClick={() => removeItem(item)}>
-          <FontAwesomeIcon icon={faCheck} className="fass" />
-          <span className="add">Added to list</span>
+        <div className="addtolist__container" onClick={() => removeItem(item)}>
+          <FontAwesomeIcon icon={faCheck} className="addtolist--icon" />
+          <span>Added to list</span>
         </div>
       ) : (
-        <div className="addtolist-container" onClick={() => addItem(item)}>
-          <FontAwesomeIcon icon={faPlus} className="fass" />
-          <span className="add">Add to list</span>
+        <div className="addtolist__container" onClick={() => addItem(item)}>
+          <FontAwesomeIcon icon={faPlus} className="addtolist--icon" />
+          <span>Add to list</span>
         </div>
       )}
     </div>

@@ -40,12 +40,12 @@ class SignIn extends React.Component {
     return (
       <div className="signin">
         <div
-          className="signin-bg"
+          className="signin__bg"
           style={{ backgroundImage: `url(${Background})` }}
         />
-        <div className="signin-container">
-          <div className="signin-shadow">
-            <h1 className="signin-title">Sign In</h1>
+        <div className="signin__container">
+          <div className="signin__shadow">
+            <h1 className="signin__title">Sign In</h1>
 
             <form
               action="POST"
@@ -70,22 +70,22 @@ class SignIn extends React.Component {
                 required
               />
 
-              <div className="signin-btn-container">
-                <div className="signin-btn">
+              <div className="signin__btn-container">
+                <div className="signin__btn">
                   <CustomButton type="submit" signin>
                     {" "}
                     Sign In{" "}
                   </CustomButton>
                   <CustomButton onClick={signInWithGoogle}>
-                    <FontAwesomeIcon icon={faGoogle} className="google-icon" />
+                    <FontAwesomeIcon icon={faGoogle} className="signin__google-icon" />
                     Sign In With Google
                   </CustomButton>
                 </div>
               </div>
             </form>
-            <div className="signup-option">
-              <span className="newuser">New to Netflix?</span>
-              <Link to="/signup" className="signupnow">
+            <div className="signin__option">
+              <span className="signin__option--newuser">New to Netflix?</span>
+              <Link to="/signup" className="signin__option--link">
                 Sign up now.
               </Link>
             </div>

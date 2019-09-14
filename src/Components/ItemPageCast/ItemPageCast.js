@@ -1,5 +1,6 @@
 import React from "react";
 import { IMAGE_BASE_URL, PROFILE_SIZE } from "../../Config/config";
+import './ItemPageCast.scss';
 
 class ItemPageCast extends React.Component {
   constructor(props) {
@@ -19,16 +20,16 @@ class ItemPageCast extends React.Component {
     const style = this.state.didLoad ? {} : { visibility: "hidden" };
     return (
       <div className="cast">
-        <div className="image-contain">
+        <div className="cast__img-box">
           <img
             src={`${profileUrl}/${profile_path}`}
             style={style}
-            alt="profile_path"
-            className="profile"
+            alt="profile"
+            className="cast__img"
             onLoad={this.onLoad}
           />
         </div>
-        <span style={style} className="profile-name">{`${name}`}</span>
+        <span style={style} className="cast__name">{`${name}`}</span>
       </div>
     );
   }

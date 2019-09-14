@@ -20,16 +20,16 @@ class CollectionGrid extends React.Component {
   render() {
     const { movieGridItems, tvShowGridItems, movies, tvshow } = this.props;
     return (
-      <div className="outer-grid">
-        <span className="left">
+      <div className="collection-grid">
+        <span className="collection-grid__left-arrow">
           <FontAwesomeIcon
             icon={faChevronLeft}
-            className="left-icon"
+            className="collection-grid__left-arrow--icon"
             onClick={() => LeftGridArrow(this.gridRef)}
           />
         </span>
-        <div className="collection-grid" ref={this.gridRef}>
-          <div className="grid-preview">
+        <div className="collection-grid__outer" ref={this.gridRef}>
+          <div className="collection-grid__inner">
             {movies
               ? movieGridItems.map(item => (
                   <CollectionGridItem key={item.id} item={item} />
@@ -41,10 +41,10 @@ class CollectionGrid extends React.Component {
                 ))
               : null}
           </div>
-          <span className="right">
+          <span className="collection-grid__right-arrow">
             <FontAwesomeIcon
               icon={faChevronRight}
-              className="right-icon"
+              className="collection-grid__right-arrow--icon"
               onClick={() => RightGridArrow(this.gridRef)}
             />
           </span>

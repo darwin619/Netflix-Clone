@@ -19,10 +19,8 @@ const CollectionItem = ({
   var titlePath = movies ? FixString(title) : null;
   var namePath = tvshow ? FixString(name) : null;
   return (
-    <div className="box">
-      <div
-        className="box-inner"
-        onClick={() => {
+    <div className="collection-item">
+      <div onClick={() => {
           return movies
             ? history.push(`/movies/${titlePath}`)
             : history.push(`/tvshows/${namePath}`);
@@ -31,15 +29,15 @@ const CollectionItem = ({
         <img
           src={`${IMAGE_BASE_URL}${GRID_IMAGE_SIZE}${backdrop_path}`}
           alt="movie"
-          className="movie-image"
+          className="collection-item__movie-image"
         />
-        <div className="text">
-          <h1 className="movie-name">{title}</h1>
-          <h1 className="movie-name">{name}</h1>
-          <span className="overview">{para}</span>
+        <div className="collection-item__text">
+          <h1 className="collection-item__title">{title}</h1>
+          <h1 className="collection-item__title">{name}</h1>
+          <span className="collection-item__overview">{para}</span>
         </div>
       </div>
-      <div className="item-addtolist">
+      <div className="collection-item__addtolist">
         <AddToList item={item} />
       </div>
     </div>

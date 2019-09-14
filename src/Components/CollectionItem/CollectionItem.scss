@@ -1,105 +1,79 @@
-.box {
+.collection-item {
   position: relative;
-}
 
-.movie-image {
-  width: 300px;
-  z-index: 1;
-
-  @media screen and (max-width: 800px) {
-    width: 230px;
-  }
-}
-
-.movie-name {
-  color: white;
-  font-size: 0.9rem;
-
-  @media screen and (max-width: 800px) {
-    font-size: 0.6rem;
-  }
-}
-
-.overview {
-  color: white;
-
-  @media screen and (max-width: 800px) {
-    font-size: 0.6rem;
-  }
-}
-
-.more {
-  color: white;
-  display: inline;
-}
-
-.text {
-  position: absolute;
-  bottom: 24%;
-  left: 2%;
-  right: 1%;
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.62s, ease 1s;
-  font-size: 10px;
-  text-shadow: 3px 3px 4px black;
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .box:active .text {
+  &:hover &__text {
     visibility: visible;
     transition: opacity 0.62s, ease 1s;
     opacity: 1;
   }
 
-  .box:active .item-addtolist {
+  &:hover &__addtolist {
     visibility: visible;
     transition: opacity 0.62s, ease 1s;
     opacity: 1;
   }
 
-  .box:active .movie-image {
+  &:hover &__movie-image {
     transition: opacity 0.62s, ease 1s;
     opacity: 0.5;
   }
-}
 
-@media screen and (min-width: 800px) {
-  .box:hover .text {
-    visibility: visible;
-    transition: opacity 0.62s, ease 1s;
-    opacity: 1;
+  &__movie-image {
+    width: 300px;
+    z-index: 1;
+
+    @media screen and (max-width: 800px) {
+      width: 230px;
+    }
   }
 
-  .box:hover .item-addtolist {
-    visibility: visible;
+  &__text {
+    position: absolute;
+    bottom: 24%;
+    left: 2%;
+    right: 1%;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
     transition: opacity 0.62s, ease 1s;
-    opacity: 1;
+    font-size: 10px;
+    text-shadow: 3px 3px 4px black;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
 
-  .box:hover .movie-image {
-    transition: opacity 0.62s, ease 1s;
-    opacity: 0.5;
+  &__title {
+    color: white;
+    font-size: 0.9rem;
+
+    @media screen and (max-width: 800px) {
+      font-size: 0.6rem;
+    }
   }
-}
 
-.item-addtolist {
-  position: absolute;
-  bottom: 5%;
-  left: 1.7%;
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  font-size: 10px;
-  text-shadow: 3px 3px 4px black;
-  transition: opacity 0.62s, ease 1s;
+  &__overview {
+    color: white;
 
-  @media screen and (max-width: 800px) {
-    display: none;
+    @media screen and (max-width: 800px) {
+      font-size: 0.6rem;
+    }
+  }
+
+  &__addtolist {
+    position: absolute;
+    bottom: 5%;
+    left: 1.7%;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 10px;
+    text-shadow: 3px 3px 4px black;
+    transition: opacity 0.62s, ease 1s;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
 }

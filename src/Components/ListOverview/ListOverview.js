@@ -8,14 +8,14 @@ import ListItem from "../ListItem/ListItem";
 const ListOverview = ({ listItems, currentUser }) => {
   return (
     <div className="list-overview">
-      <h1 className="list-overview-title">
+      <h1 className="list-overview__title">
         {currentUser
           ? `${currentUser.displayName}'s List (${listItems.length})`
           : "Sign in to view your list"}
       </h1>
-      <div className="list-items-grid">
+      <div className="list-overview__outer">
         {currentUser ? (
-          <div className="list-items-container">
+          <div className="list-overview__inner">
             {listItems.map(item => (
               <ListItem key={item.id} item={item} />
             ))}

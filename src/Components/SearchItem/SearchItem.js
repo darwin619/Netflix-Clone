@@ -13,19 +13,19 @@ const SearchItem = ({ item, history, ListItems }) => {
   var namePath = name ? FixString(name) : null;
   return (
     <div className="search-item">
-      <div className="rating-container">
-        <span className="rating">
-          <img src={imdb} alt="imdb" className="imdb" />
-          <span className="rank">{vote_average}/</span>
-          <span className="ten">10</span>
-          <img src={star} alt="imdb" className="star" />
+      <div className="search-item__rating-container">
+        <span className="search-item__rating">
+          <img src={imdb} alt="imdb" className="search-item__imdb" />
+          <span className="search-item__rank">{vote_average}/</span>
+          <span className="search-item__ten">10</span>
+          <img src={star} alt="imdb" className="search-item__star" />
         </span>
       </div>
-      <div className="search-addtolist">
+      <div className="search-item__addtolist">
         <AddToList item={item} />
       </div>
       <div
-        className="search-image-container"
+        className="search-item__img-box"
         onClick={() => {
           return title
             ? history.push({ pathname: `/movies/${titlePath}`, state: { id } })
@@ -35,13 +35,13 @@ const SearchItem = ({ item, history, ListItems }) => {
         <img
           src={`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`}
           alt="movie"
-          className="search-image"
+          className="search-item__img"
         />
       </div>
 
-      <div className="search-text">
-        <h1 className="search-movie-name">{title}</h1>
-        <h1 className="search-movie-name">{name}</h1>
+      <div className="search-item__text">
+        <h1 className="search-item__title">{title}</h1>
+        <h1 className="search-item__title">{name}</h1>
       </div>
     </div>
   );

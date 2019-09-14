@@ -56,12 +56,12 @@ class SignUp extends React.Component {
     return (
       <div className="signup">
         <div
-          className="signup-bg"
+          className="signup__bg"
           style={{ backgroundImage: `url(${Background})` }}
         />
-        <div className="signup-container">
-          <div className="signup-shadow">
-            <h1 className="signup-title">Sign Up</h1>
+        <div className="signup__container">
+          <div className="signup__shadow">
+            <h1 className="signup__title">Sign Up</h1>
 
             <form action="POST" onSubmit={this.handleSubmit}>
               <FormInput
@@ -100,15 +100,17 @@ class SignUp extends React.Component {
                 required
               />
 
-              <div className="signup-btn-container">
-                <div className="signup-btn">
+              <div className="signup__btn-container">
+                <div className="signup__btn">
                   <CustomButton type="submit"> Sign Up </CustomButton>
                 </div>
               </div>
             </form>
-            <div className="signup-option">
-              <span className="newuser">Already signed up?</span>
-              <Link to="/signin" className="signupnow">
+            <div className="signup__option">
+              <span className="signup__option--newuser">
+                Already signed up?
+              </span>
+              <Link to="/signin" className="signup__option--link">
                 Log in now.
               </Link>
             </div>

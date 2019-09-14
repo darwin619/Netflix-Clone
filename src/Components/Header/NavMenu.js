@@ -15,44 +15,44 @@ import Netflix from "../../Assets/netflix.jpg";
 const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
   return (
     <div className="overlay">
-      <div className="exit" onClick={ToggleMenuHidden}>
-        <FontAwesomeIcon icon={faTimes} className="exit-menu-icon" />
+      <div className="overlay__exit" onClick={ToggleMenuHidden}>
+        <FontAwesomeIcon icon={faTimes} className="overlay__exit-icon" />
       </div>
-      <div className="overlay-content" onClick={ToggleMenuHidden}>
-        <img src={Netflix} alt="netflix_profile" className="netflix_profile" />
+      <div className="overlay__content" onClick={ToggleMenuHidden}>
+        <img src={Netflix} alt="netflix" className="overlay__netflix" />
 
         {currentUser ? (
-          <Link className="navmenu-username" to="">
+          <Link className="overlay__username" to="">
             Hi, {currentUser.displayName}
           </Link>
         ) : (
-          <Link className="navmenu-username" to="">
+          <Link className="overlay__username" to="">
             Hi, Guest
           </Link>
         )}
 
-        <Link className="navmenu-option" to="/movies">
+        <Link className="overlay__option" to="/movies">
           Movies
         </Link>
 
-        <Link className="navmenu-option" to="/tvshows">
+        <Link className="overlay__option" to="/tvshows">
           TV Shows
         </Link>
 
-        <Link className="navmenu-option" to="/mylist">
+        <Link className="overlay__option" to="/mylist">
           My List
         </Link>
 
         {currentUser ? (
           <div
-            className="navmenu-option signout"
+            className="overlay__option overlay__signout"
             onClick={() => auth.signOut()}
           >
             Sign Out
           </div>
         ) : (
           <div>
-            <Link className="navmenu-option" to="/signin">
+            <Link className="overlay__option" to="/signin">
               Sign In
             </Link>
           </div>

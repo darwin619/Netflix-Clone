@@ -8,9 +8,19 @@
   opacity: 0.95;
   background-color: black;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: hidden;  
   transition: 0.5s;
   animation: moveToBottom 0.7s ease-out;
+
+  a {
+    padding-bottom: 36px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-transform: capitalize;
+  }
 
   @keyframes moveToBottom {
     0% {
@@ -22,49 +32,39 @@
       transform: translateX(0);
     }
   }
-}
 
-.overlay-content {
-  position: absolute;
-  top: 17%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.overlay a {
-  padding-bottom: 36px;
-  text-decoration: none;
-  font-size: 22px;
-  color: white;
-  display: block;
-  transition: 0.3s;
-  text-transform: capitalize;
-}
-
-.exit-menu-icon {
-  color: white;
-  font-size: 32px;
-  position: absolute;
-  top: 2%;
-  left: 5%;
-  transition: all 0.3s ease;
-
-  &:active {
-    transform: scale(1.1);
+  &__content {
+    position: absolute;
+    top: 17%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
-}
 
-.signout {
-  color: white;
-  font-size: 22px;
-  text-align: center;
-}
+  &__exit-icon {
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    transition: all 0.3s ease;
 
-.netflix_profile {
-  width: 50px;
-  margin: 15px auto;
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  &__signout {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  &__netflix {
+    width: 50px;
+    margin: 15px auto;
+  }
 }

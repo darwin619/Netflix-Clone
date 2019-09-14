@@ -28,7 +28,7 @@ const ItemPageFooter = ({
   const existingItem = listItems.filter(listItem => listItem.id === item.id);
   return (
     <div className="item-page-footer">
-      <div className="item-page-container">
+      <div className="item-page-footer__container">
         {movies && movieCast.length
           ? movieCast
               .filter((item, index) => index < 4)
@@ -57,15 +57,15 @@ const ItemPageFooter = ({
           : null}
       </div>
 
-      <div className="buttons">
+      <div className="item-page-footer__btn-container">
         {existingItem.length ? (
-          <button className="btn" onClick={() => removeItem(item)}>
-            <FontAwesomeIcon icon={faCheck} className="icon" />
+          <button className="item-page-footer__btn" onClick={() => removeItem(item)}>
+            <FontAwesomeIcon icon={faCheck} className="item-page-footer__icon" />
             Added To List
           </button>
         ) : (
-          <button className="btn" onClick={() => addItem(item)}>
-            <FontAwesomeIcon icon={faPlus} className="icon" />
+          <button className="item-page-footer__btn" onClick={() => addItem(item)}>
+            <FontAwesomeIcon icon={faPlus} className="item-page-footer__icon" />
             My List
           </button>
         )}
@@ -76,9 +76,9 @@ const ItemPageFooter = ({
               ? window.open(`${TRAILER_LINK}${movieVideos}`, "_blank")
               : window.open(`${TRAILER_LINK}${tvVideos}`, "_blank");
           }}
-          className="btn"
+          className="item-page-footer__btn"
         >
-          <FontAwesomeIcon icon={faPlay} className="icon" />
+          <FontAwesomeIcon icon={faPlay} className="item-page-footer__icon" />
           Watch Trailer
         </button>
       </div>

@@ -4,11 +4,12 @@
   margin-bottom: 20px;
   height: 270px;
   overflow: hidden;
+  
   @media screen and (max-width: 800px) {
     height: 210px;
   }
 
-  .title {
+  &__title {
     font-size: 1.4rem;
     margin-left: 3px;
 
@@ -17,38 +18,28 @@
     }
   }
 
-  .collection-box {
+  &__collection-item {
     display: flex;
     height: 100%;
     flex-direction: row;
     position: relative;
+  }
 
-    .left-controls,
-    .right-controls {
-      height: 168.4px;
-      display: flex;
-      align-items: center;
-      font-size: 2.5rem;
-      z-index: 1;
-      opacity: 1;
-      color: white;
+  &__left-arrow,
+  &__right-arrow {
+    height: 168.4px;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    z-index: 1;
+    opacity: 1;
+    color: white;
 
-      @media screen and (max-width: 800px) {
-        height: 129.44px;
-      }
+    @media screen and (max-width: 800px) {
+      height: 129.44px;
     }
 
-    .left-controls {
-      position: absolute;
-    }
-
-    .right-controls {
-      position: absolute;
-      right: 0%;
-    }
-
-    .left-control-icon,
-    .right-control-icon {
+    &__icon {
       cursor: pointer;
 
       &:hover {
@@ -57,58 +48,61 @@
         transition: all 0.2s ease;
       }
     }
+  }
 
-    /* .preview-container {
-      height: 270px;
-      display: flex;
-      flex-direction: column;
-    }*/
+  &__left-arrow {
+    position: absolute;
+  }
 
-    .preview {
-      display: flex;
-      cursor: pointer;
-      height: 168.4px;
+  &__right-arrow {
+    position: absolute;
+    right: 0%;
+  }
+
+  &__inner {
+    display: flex;
+    cursor: pointer;
+    height: 168.4px;
+
+    &:hover {
+      .collection-item {
+        transform: translateX(-25%);
+      }
+    }
+
+    .collection-item:hover ~ .collection-item {
+      transform: translateX(25%);
+    }
+
+    .collection-item:first-child:hover ~ .collection-item {
+      transform: translateX(50%);
+    }
+
+    .collection-item:last-child:hover ~ .collection-item {
+      transform: translateX(-50%);
+    }
+
+    .collection-item {
+      & {
+        transition: transform 300ms ease 100ms;
+      }
+
+      &:first-child {
+        transform-origin: left;
+      }
+
+      &:last-child {
+        transform-origin: right;
+      }
 
       &:hover {
-        .box {
-          transform: translateX(-25%);
-        }
+        transform: scale(1.5);
       }
-
-      .box:hover ~ .box {
-        transform: translateX(25%);
+      &:hover:first-child {
+        transform: scale(1.5);
       }
-
-      .box:first-child:hover ~ .box {
-        transform: translateX(50%);
-      }
-
-      .box:last-child:hover ~ .box {
-        transform: translateX(-50%);
-      }
-
-      .box {
-        & {
-          transition: transform 300ms ease 100ms;
-        }
-
-        &:first-child {
-          transform-origin: left;
-        }
-
-        &:last-child {
-          transform-origin: right;
-        }
-
-        &:hover {
-          transform: scale(1.5);
-        }
-        &:hover:first-child {
-          transform: scale(1.5);
-        }
-        &:hover:last-child {
-          transform: scale(1.25);
-        }
+      &:hover:last-child {
+        transform: scale(1.25);
       }
     }
   }

@@ -9,45 +9,50 @@ import Thanos from "react-thanos";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer-text">
-        <div className="footer-start">
+      <div className="footer__container">
+        <div className="footer__start">
           <Thanos
             onSnap={() => console.log("I love you 3000! Decimate...")}
             onSnapReverse={() => console.log("Avengers assemble!")}
           />
+
           <h1
-            className="made one"
+            className="footer__text footer__text--1"
             onClick={() => window.open(`https://shivamaima.com/`, "_blank")}
           >
-            By <span className="name-link">Shivam Aima</span>
+            By <span className="footer__link">Shivam Aima</span>
           </h1>
         </div>
-        <div className="center-text">
+
+        <div className="footer__center">
           <img
             src={tmdb}
             alt="tmdb"
-            className="tmdb"
+            className="footer__logo-tmdb"
             onClick={() =>
               window.open(` https://www.themoviedb.org/en`, "_blank")
             }
           />
-          <h1 className="made two">
+
+          <h1 className="footer__text footer__text--2">
             Copyright©2019, ReactJS is
             <FontAwesomeIcon
               icon={faHeart}
-              className="fa fa-heart-o heart-off"
+              className="footer__icon-heart-o footer__icon-heart-off"
               aria-hidden="true"
             />
           </h1>
         </div>
+
         <div
-          className="footer-end"
+          className="footer__end"
           onClick={() =>
             window.open(`https://github.com/darwin619/Netflix-Clone`, "_blank")
           }
         >
-          <img src={github} alt="github" className="github-logo" />
-          <h1 className="made three">View on Github</h1>
+          <img src={github} alt="github" className="footer__logo-github" />
+
+          <h1 className="footer__text footer__link">View on Github</h1>
         </div>
       </div>
     </div>

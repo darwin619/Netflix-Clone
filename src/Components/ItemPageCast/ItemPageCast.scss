@@ -1,0 +1,43 @@
+.cast {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 70px;
+    margin-top: 10px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__img-box {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+
+    @media screen and (max-width: 800px) {
+      width: 70px;
+    }
+  }
+
+  &__img {
+    width: 80px;
+    box-shadow: 0 0px 20px rgba(154, 160, 185, 0.05),
+      0 0px 8px rgba(166, 173, 201, 0.2);
+    padding: 3px;
+
+    @media screen and (max-width: 800px) {
+      width: 65px;
+      height: 100px;
+    }
+  }
+
+  &__name {
+    text-align: center;
+  }
+}
