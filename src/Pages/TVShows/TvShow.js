@@ -6,9 +6,11 @@ import {
   selectIsTVFetching
 } from "../../Redux/TVShow/tv-selectors";
 import { getTvShows } from "../../Redux/TVShow/tv-actions";
-import CollectionGridTVShows from "../../Components/CollectionGrid/CollectionGridTVShows";
+
+const CollectionGridTVShows = React.lazy(() => import("../../Components/CollectionGrid/CollectionGridTVShows"));
 
 const CollectionOverviewTVShows = React.lazy(() => import("../../Components/CollectionOverview/CollectionOverviewTVShows"));
+
 const Footer = React.lazy(() => import("../../Components/Footer/Footer"));
 
 class TvShow extends React.Component {
@@ -19,8 +21,8 @@ class TvShow extends React.Component {
   render() {
     return (
       <div className="TV">
-        <CollectionGridTVShows tvshow />
         <Suspense fallback={<div></div>}>
+          <CollectionGridTVShows tvshow />
           <CollectionOverviewTVShows tvshow />
           <Footer />
         </Suspense>

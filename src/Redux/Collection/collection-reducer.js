@@ -3,7 +3,7 @@ const INITIAL_STATE = {
     {
       id: 1,
       title: "Popular",
-      start: 1,
+      start: 0,
       end: 10
     },
     {

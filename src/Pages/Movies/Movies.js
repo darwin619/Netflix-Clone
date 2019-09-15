@@ -6,10 +6,13 @@ import {
   selectIsMovieFetching
 } from "../../Redux/Movie/movie-selectors";
 import { getMovies } from "../../Redux/Movie/movie-actions";
-import CollectionGridMovie from "../../Components/CollectionGrid/CollectionGridMovie";
+
+const CollectionGridMovie = React.lazy(() => import("../../Components/CollectionGrid/CollectionGridMovie"));
+
 const CollectionOverviewMovie = React.lazy(() =>
   import("../../Components/CollectionOverview/CollectionOverviewMovie")
 );
+
 const Footer = React.lazy(() => import("../../Components/Footer/Footer"));
 
 class Movies extends React.Component {
@@ -20,8 +23,8 @@ class Movies extends React.Component {
   render() {
     return (
       <div className="movies">
-        <CollectionGridMovie movies />
         <Suspense fallback={<div></div>}>
+          <CollectionGridMovie movies />
           <CollectionOverviewMovie movies />
           <Footer />
         </Suspense>
