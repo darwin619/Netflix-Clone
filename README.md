@@ -31,14 +31,14 @@ Demo: [Link](https://netflix-clone-by-shivam.netlify.com/)
 
 ### Video Demo
 
-![demogif](netflix-clone.gif)
+![demogif](Netflix-Clone.gif)
 
 ---
 
 ## Tech Stack
 
 - [React](https://github.com/facebook/react) 
-  - 
+  - Create-react-app with highly complex frontend structure
 - [Redux](https://redux.js.org/) 
   - State management and redux thunk for asynchronous api calls
 - [Firebase](https://firebase.google.com/) 
@@ -61,7 +61,7 @@ Netflix clone made with advanced react, redux & firebase which uses redux thunk 
 - Users can safely sign up and sign in, google sign in enabled with firebase
 - Collections of popular movies and tvshows for recommendations
 - A searchbar to search through TMDB database of over 30000 movies
-- Movie and Tv Pages dynamically generated for every single movie
+- Movie and TV Pages dynamically generated for every single movie
 - Details include imdb rating, cast info, trailer links
 - Add to list feature active throughout the app
 - Carousel created from scratch by using jquery
@@ -75,7 +75,6 @@ Netflix clone made with advanced react, redux & firebase which uses redux thunk 
 - Add python scraper to customize recommendations for each user
 - Move backend and database to node and express.
 
-
 ---
 
 ## Author
@@ -86,6 +85,6 @@ Netflix clone made with advanced react, redux & firebase which uses redux thunk 
 
 ## License
 
-Full credit for API data to TMDB API.
+- Full credit for API data to TMDB API.
 
 ---
