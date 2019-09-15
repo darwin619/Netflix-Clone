@@ -4,7 +4,7 @@
   margin-bottom: 20px;
   height: 270px;
   overflow: hidden;
-  
+
   @media screen and (max-width: 800px) {
     height: 210px;
   }
@@ -49,7 +49,8 @@
     right: 0%;
   }
 
-  &__left-arrow-icon, &__right-arrow-icon {
+  &__left-arrow-icon,
+  &__right-arrow-icon {
     cursor: pointer;
 
     &:hover {
@@ -63,47 +64,58 @@
     display: flex;
     cursor: pointer;
     height: 168.4px;
-    -webkit-overflow-scrolling: touch;
 
-    &:hover {
-      .collection-item {
-        transform: translateX(-25%);
+    @media screen and (max-width: 800px) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar {
+        display: none;
       }
     }
 
-    .collection-item:hover ~ .collection-item {
-      transform: translateX(25%);
-    }
-
-    .collection-item:first-child:hover ~ .collection-item {
-      transform: translateX(50%);
-    }
-
-    .collection-item:last-child:hover ~ .collection-item {
-      transform: translateX(-50%);
-    }
-
-    .collection-item {
-      & {
-        transition: transform 300ms ease 100ms;
-      }
-
-      &:first-child {
-        transform-origin: left;
-      }
-
-      &:last-child {
-        transform-origin: right;
-      }
-
+    @media screen and (min-width: 800px) {
       &:hover {
-        transform: scale(1.5);
+        .collection-item {
+          transform: translateX(-25%);
+        }
       }
-      &:hover:first-child {
-        transform: scale(1.5);
+
+      .collection-item:hover ~ .collection-item {
+        transform: translateX(25%);
       }
-      &:hover:last-child {
-        transform: scale(1.25);
+
+      .collection-item:first-child:hover ~ .collection-item {
+        transform: translateX(50%);
+      }
+
+      .collection-item:last-child:hover ~ .collection-item {
+        transform: translateX(-50%);
+      }
+
+      .collection-item {
+        & {
+          transition: transform 300ms ease 100ms;
+        }
+
+        &:first-child {
+          transform-origin: left;
+        }
+
+        &:last-child {
+          transform-origin: right;
+        }
+
+        &:hover {
+          transform: scale(1.5);
+        }
+        &:hover:first-child {
+          transform: scale(1.5);
+        }
+        &:hover:last-child {
+          transform: scale(1.25);
+        }
       }
     }
   }
