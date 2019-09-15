@@ -63,6 +63,7 @@
     display: flex;
     cursor: pointer;
     height: 168.4px;
+    -webkit-overflow-scrolling: touch;
 
     &:hover {
       .collection-item {

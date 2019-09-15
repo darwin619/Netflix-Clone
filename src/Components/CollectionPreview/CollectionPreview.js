@@ -46,9 +46,10 @@ class CollectionPreview extends React.Component {
     const movieData = movieItems.slice(start, end);
     const tvData = tvItems.slice(start, end);
     return (
-      <div className="collection-preview">
-        <h1 className="collection-preview__title">{title.toUpperCase()}</h1>
-        <Fade>
+      <Fade>
+        <div className="collection-preview">
+          <h1 className="collection-preview__title">{title.toUpperCase()}</h1>
+
           <div className="collection-preview__box">
             <span className="collection-preview__left-arrow">
               <FontAwesomeIcon
@@ -87,8 +88,8 @@ class CollectionPreview extends React.Component {
                 : null}
             </div>
           </div>
-        </Fade>
-      </div>
+        </div>
+      </Fade>
     );
   }
 }

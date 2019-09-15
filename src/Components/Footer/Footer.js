@@ -35,12 +35,12 @@ const Footer = () => {
           />
 
           <h1 className="footer__text footer__text--2">
-            Copyright©2019, ReactJS is
+            Copyright©2019, <span className="react"> ReactJS is
             <FontAwesomeIcon
               icon={faHeart}
               className="footer__icon-heart-o footer__icon-heart-off"
               aria-hidden="true"
-            />
+            /></span>
           </h1>
         </div>
 

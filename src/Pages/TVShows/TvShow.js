@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "./TvShow.scss";
 import { connect } from "react-redux";
 import {
@@ -6,9 +6,10 @@ import {
   selectIsTVFetching
 } from "../../Redux/TVShow/tv-selectors";
 import { getTvShows } from "../../Redux/TVShow/tv-actions";
-import CollectionOverviewTVShows from "../../Components/CollectionOverview/CollectionOverviewTVShows";
 import CollectionGridTVShows from "../../Components/CollectionGrid/CollectionGridTVShows";
-import Footer from "../../Components/Footer/Footer";
+
+const CollectionOverviewTVShows = React.lazy(() => import("../../Components/CollectionOverview/CollectionOverviewTVShows"));
+const Footer = React.lazy(() => import("../../Components/Footer/Footer"));
 
 class TvShow extends React.Component {
   componentDidMount() {
@@ -16,12 +17,13 @@ class TvShow extends React.Component {
   }
 
   render() {
-    const { isFetching } = this.props;
     return (
       <div className="TV">
         <CollectionGridTVShows tvshow />
-        <CollectionOverviewTVShows tvshow />
-        {isFetching ? null : <Footer />}
+        <Suspense fallback={<div></div>}>
+          <CollectionOverviewTVShows tvshow />
+          <Footer />
+        </Suspense>
       </div>
     );
   }

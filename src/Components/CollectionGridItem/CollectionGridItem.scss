@@ -5,6 +5,10 @@
   &:last-child {
     .grid-item__movie-text {
       bottom: 40%;
+
+      @media screen and (max-width: 800px) {
+        bottom: 17%;
+      }
     }
   }
 

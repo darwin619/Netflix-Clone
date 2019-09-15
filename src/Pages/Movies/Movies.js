@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "./Movies.scss";
 import { connect } from "react-redux";
 import {
@@ -6,9 +6,11 @@ import {
   selectIsMovieFetching
 } from "../../Redux/Movie/movie-selectors";
 import { getMovies } from "../../Redux/Movie/movie-actions";
-import CollectionOverviewMovie from "../../Components/CollectionOverview/CollectionOverviewMovie";
 import CollectionGridMovie from "../../Components/CollectionGrid/CollectionGridMovie";
-import Footer from "../../Components/Footer/Footer";
+const CollectionOverviewMovie = React.lazy(() =>
+  import("../../Components/CollectionOverview/CollectionOverviewMovie")
+);
+const Footer = React.lazy(() => import("../../Components/Footer/Footer"));
 
 class Movies extends React.Component {
   componentDidMount() {
@@ -16,12 +18,13 @@ class Movies extends React.Component {
   }
 
   render() {
-    const { isFetching } = this.props;
     return (
       <div className="movies">
         <CollectionGridMovie movies />
-        <CollectionOverviewMovie movies />
-        {isFetching ? null : <Footer />}
+        <Suspense fallback={<div></div>}>
+          <CollectionOverviewMovie movies />
+          <Footer />
+        </Suspense>
       </div>
     );
   }

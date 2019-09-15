@@ -101,6 +101,10 @@
     -o-animation: heart 0.1s ease infinite;
     /* Opera */
   }
+  
+  .react {
+    display: inline-block;
+  }
 
   @keyframes heart {
     0%,
