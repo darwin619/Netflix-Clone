@@ -34,15 +34,7 @@ class CollectionPreview extends React.Component {
   };
 
   render() {
-    const {
-      title,
-      movieItems,
-      tvItems,
-      start,
-      end,
-      movies,
-      tvshow
-    } = this.props;
+    const { title,movieItems,tvItems,start,end,movies,tvshow } = this.props;
     const movieData = movieItems.slice(start, end);
     const tvData = tvItems.slice(start, end);
     return (
