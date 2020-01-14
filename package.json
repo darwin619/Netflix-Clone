@@ -18,14 +18,11 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.0",
     "react-slick": "^0.25.2",
-    "react-thanos": "^1.0.2",
-    "react-thanos-snap": "0.0.7",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0",
-    "slick-carousel": "^1.8.1"
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -50,5 +47,17 @@
   },
   "devDependencies": {
     "font-awesome": "^4.7.0"
-  }
+  },
+  "description": "- **Netflix Clone made with React, Redux and Firebase**",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darwin619/Netflix-Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darwin619/Netflix-Clone/issues"
+  },
+  "homepage": "https://github.com/darwin619/Netflix-Clone#readme"
 }

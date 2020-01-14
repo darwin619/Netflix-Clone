@@ -16,13 +16,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavMenu from "./NavMenu";
 
-const Header = ({
-  history,
-  currentUser,
-  currentRoute,
-  hidden,
-  ToggleMenuHidden
-}) => {
+const Header = ({history,currentUser,currentRoute,hidden,ToggleMenuHidden}) => {
   return (
     <div className="header">
       <div className="header__logo-box" onClick={() => history.push("/movies")}>
