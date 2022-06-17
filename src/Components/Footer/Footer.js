@@ -4,7 +4,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import tmdb from "../../Assets/tmdb.png";
 import github from "../../Assets/github.png";
-import Thanos from "react-thanos";
+import Thanos from "react-thanos-glove";
 
 const Footer = () => {
   return (
