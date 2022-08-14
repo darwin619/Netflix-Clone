@@ -1,35 +1,37 @@
 import React from "react";
-import "./App.css";
-import Header from "./Components/Header/Header";
+
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { withRouter } from "react-router";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Movies from "./Pages/Movies/Movies";
-import TvShow from "./Pages/TVShows/TvShow";
-import MovieItemPage from "./Pages/MovieItemPage/MovieItemPage";
-import TVShowItemPage from "./Pages/TVShowItemPage/TVShowItemPage";
-import SignIn from "./Pages/SignIn/SignIn";
-import SignUp from "./Pages/SignUp/SignUp";
+
+import "./App.css";
+import { Header, SearchPage, ListOverview } from "./Components";
+import {
+  Movies,
+  TvShow,
+  SignIn,
+  SignUp,
+  MovieItemPage,
+  TVShowItemPage,
+} from "./Pages";
 import { auth } from "./Firebase/firebase.utils";
 import { CreateUserProfileDocument } from "./Firebase/firebase.utils";
 import { setCurrentUser } from "./Redux/User/user-actions";
 import { selectCurrentUser } from "./Redux/User/user-selectors";
-import { connect } from "react-redux";
-import SearchPage from "./Components/SearchPage/SearchPage";
-import { compose } from "redux";
-import { withRouter } from "react-router";
-import ListOverview from "./Components/ListOverview/ListOverview";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await CreateUserProfileDocument(userAuth);
 
-        userRef.onSnapshot(snapShot => {
+        userRef.onSnapshot((snapShot) => {
           this.props.setCurrentUser({
             id: snapShot.id,
-            ...snapShot.data()
+            ...snapShot.data(),
           });
         });
       } else {
@@ -74,18 +76,15 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser: selectCurrentUser(state)
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
 
 export default compose(
   withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )
+  connect(mapStateToProps, mapDispatchToProps)
 )(App);
